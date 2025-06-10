@@ -51,14 +51,14 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-charcoal-gradient">
+    <section id="testimonials" className="py-20 bg-midnight-950">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
-          <h2 className="subheading-luxury text-white mb-6">
-            Clientes <span className="text-gold-400">Satisfeitos</span>
+          <h2 className="subheading-luxury text-platinum-100 mb-6">
+            Clientes <span className="text-champagne-400">Satisfeitos</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-platinum-300 max-w-3xl mx-auto font-light">
             Experiências que falam por si só - a excelência reconhecida pelos clientes do Felipe
           </p>
         </div>
@@ -72,14 +72,14 @@ const TestimonialsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Quote Icon */}
-              <div className="text-gold-400 mb-4">
+              <div className="text-champagne-400 mb-4">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
               </div>
 
               {/* Content */}
-              <p className="text-white/90 mb-6 leading-relaxed italic text-lg">
+              <p className="text-platinum-200 mb-6 leading-relaxed italic text-lg">
                 "{testimonial.content}"
               </p>
 
@@ -96,10 +96,10 @@ const TestimonialsSection = () => {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-playfair font-semibold text-white">
+                  <h4 className="font-playfair font-semibold text-platinum-100">
                     {testimonial.name}
                   </h4>
-                  <p className="text-gold-400 text-sm">
+                  <p className="text-champagne-400 text-sm">
                     {testimonial.position}
                   </p>
                 </div>
