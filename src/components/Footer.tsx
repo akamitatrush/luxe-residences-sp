@@ -67,7 +67,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div className="font-playfair text-2xl font-bold">
                 <span className="text-gold-400">LUXE</span>
-                <span className="text-white ml-2">RÉSIDENCES</span>
+                <span className="text-white ml-2">IMÓVEIS</span>
               </div>
             </div>
             <p className="text-white/70 mb-6 leading-relaxed">
