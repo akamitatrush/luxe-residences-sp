@@ -13,7 +13,7 @@ const PropertiesSection = () => {
       specs: '4 suítes, 5 banheiros, 580m²',
       badge: 'TOP VENDAS',
       badgeColor: 'bg-blue-500',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Jardins'
     },
     {
@@ -24,7 +24,7 @@ const PropertiesSection = () => {
       specs: '5 suítes, 6 banheiros, 860m²',
       badge: 'EXCLUSIVO',
       badgeColor: 'bg-gold-500',
-      image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Morumbi'
     },
     {
@@ -98,12 +98,25 @@ const PropertiesSection = () => {
 
   const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
 
-  const filteredProperties = activeFilter === 'Todos' 
-    ? properties 
-    : properties.filter(property => property.category === activeFilter);
+  const getFilteredProperties = () => {
+    console.log('Getting filtered properties for:', activeFilter);
+    console.log('Total properties:', properties.length);
+    
+    if (activeFilter === 'Todos') {
+      console.log('Returning all properties');
+      return properties;
+    }
+    
+    const filtered = properties.filter(property => {
+      console.log(`Property: ${property.name}, Category: ${property.category}, Filter: ${activeFilter}, Match: ${property.category === activeFilter}`);
+      return property.category === activeFilter;
+    });
+    
+    console.log('Filtered result:', filtered.length, 'properties');
+    return filtered;
+  };
 
-  console.log('Active filter:', activeFilter);
-  console.log('Filtered properties count:', filteredProperties.length);
+  const filteredProperties = getFilteredProperties();
 
   return (
     <section id="properties" className="py-20 bg-pearl">
@@ -124,7 +137,8 @@ const PropertiesSection = () => {
             <button
               key={filter}
               onClick={() => {
-                console.log(`Setting filter to: ${filter}`);
+                console.log(`Clicking filter: ${filter}`);
+                console.log('Current active filter:', activeFilter);
                 setActiveFilter(filter);
               }}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -136,6 +150,13 @@ const PropertiesSection = () => {
               {filter}
             </button>
           ))}
+        </div>
+
+        {/* Debug Info */}
+        <div className="text-center mb-4">
+          <p className="text-sm text-charcoal-500">
+            Filtro ativo: {activeFilter} | Apartamentos encontrados: {filteredProperties.length}
+          </p>
         </div>
 
         {/* Properties Grid */}
@@ -198,7 +219,7 @@ const PropertiesSection = () => {
           ) : (
             <div className="col-span-full text-center py-12">
               <p className="text-charcoal-600 text-lg">
-                Nenhum apartamento encontrado para {activeFilter}
+                Nenhum apartamento encontrado para o filtro: {activeFilter}
               </p>
             </div>
           )}
