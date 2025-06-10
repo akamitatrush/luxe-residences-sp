@@ -14,8 +14,8 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
-          alt="Luxury Property Background"
+          src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+          alt="Luxury Apartment Background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-hero-overlay"></div>
