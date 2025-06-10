@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { properties, filters } from '../data/propertyData';
 import { Property } from '../data/propertyData';
 import { usePropertyFilter } from '../hooks/usePropertyFilter';
@@ -6,21 +6,26 @@ import PropertyCard from './PropertyCard';
 import PropertyFilters from './PropertyFilters';
 import PropertyModal from './PropertyModal';
 
+// ✅ Memoização do PropertyCard para evitar re-renders desnecessários
+const MemoizedPropertyCard = memo(PropertyCard);
+
 const PropertiesSection = () => {
   const { activeFilter, filteredProperties, handleFilterClick } = usePropertyFilter(properties);
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handlePropertyClick = (property: Property) => {
+  // ✅ useCallback para evitar re-criação da função
+  const handlePropertyClick = useCallback((property: Property) => {
     console.log('Propriedade clicada:', property.name);
     setSelectedProperty(property);
     setIsModalOpen(true);
-  };
+  }, []);
 
-  const handleCloseModal = () => {
+  // ✅ useCallback para evitar re-criação da função
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedProperty(null);
-  };
+  }, []);
 
   return (
     <section id="properties" className="py-20 bg-pearl">
@@ -50,12 +55,12 @@ const PropertiesSection = () => {
           </p>
         </div>
 
-        {/* Properties Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Properties Grid com transição suave */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 properties-grid">
           {filteredProperties.length > 0 ? (
             filteredProperties.map((property, index) => (
-              <PropertyCard 
-                key={property.id} // ✅ Removido o activeFilter da key
+              <MemoizedPropertyCard 
+                key={property.id} // ✅ Key estável baseada apenas no ID
                 property={property}
                 index={index}
                 onClick={() => handlePropertyClick(property)}
@@ -88,4 +93,5 @@ const PropertiesSection = () => {
   );
 };
 
-export default PropertiesSection;
+// ✅ Memoização do componente principal
+export default memo(PropertiesSection);
