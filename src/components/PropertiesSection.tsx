@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 const PropertiesSection = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
@@ -98,25 +97,31 @@ const PropertiesSection = () => {
 
   const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
 
-  const getFilteredProperties = () => {
-    console.log('Getting filtered properties for:', activeFilter);
-    console.log('Total properties:', properties.length);
+  const filteredProperties = useMemo(() => {
+    console.log('useMemo: Filtering properties for:', activeFilter);
+    console.log('useMemo: Total properties:', properties.length);
     
     if (activeFilter === 'Todos') {
-      console.log('Returning all properties');
+      console.log('useMemo: Returning all properties');
       return properties;
     }
     
     const filtered = properties.filter(property => {
-      console.log(`Property: ${property.name}, Category: ${property.category}, Filter: ${activeFilter}, Match: ${property.category === activeFilter}`);
-      return property.category === activeFilter;
+      const matches = property.category === activeFilter;
+      console.log(`useMemo: ${property.name} (${property.category}) matches ${activeFilter}: ${matches}`);
+      return matches;
     });
     
-    console.log('Filtered result:', filtered.length, 'properties');
+    console.log('useMemo: Final filtered result:', filtered.length, 'properties');
     return filtered;
-  };
+  }, [activeFilter, properties]);
 
-  const filteredProperties = getFilteredProperties();
+  const handleFilterClick = (filter: string) => {
+    console.log(`Button clicked: ${filter}`);
+    console.log('Current active filter before change:', activeFilter);
+    setActiveFilter(filter);
+    console.log('Filter changed to:', filter);
+  };
 
   return (
     <section id="properties" className="py-20 bg-pearl">
@@ -136,11 +141,7 @@ const PropertiesSection = () => {
           {filters.map((filter) => (
             <button
               key={filter}
-              onClick={() => {
-                console.log(`Clicking filter: ${filter}`);
-                console.log('Current active filter:', activeFilter);
-                setActiveFilter(filter);
-              }}
+              onClick={() => handleFilterClick(filter)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeFilter === filter
                   ? 'bg-gold-500 text-white shadow-lg'
@@ -155,7 +156,7 @@ const PropertiesSection = () => {
         {/* Debug Info */}
         <div className="text-center mb-4">
           <p className="text-sm text-charcoal-500">
-            Filtro ativo: {activeFilter} | Apartamentos encontrados: {filteredProperties.length}
+            Filtro ativo: <strong>{activeFilter}</strong> | Apartamentos encontrados: <strong>{filteredProperties.length}</strong>
           </p>
         </div>
 
@@ -164,7 +165,7 @@ const PropertiesSection = () => {
           {filteredProperties.length > 0 ? (
             filteredProperties.map((property, index) => (
               <div
-                key={property.id}
+                key={`${property.id}-${activeFilter}`}
                 className="property-card scroll-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -219,7 +220,7 @@ const PropertiesSection = () => {
           ) : (
             <div className="col-span-full text-center py-12">
               <p className="text-charcoal-600 text-lg">
-                Nenhum apartamento encontrado para o filtro: {activeFilter}
+                Nenhum apartamento encontrado para o filtro: <strong>{activeFilter}</strong>
               </p>
             </div>
           )}
