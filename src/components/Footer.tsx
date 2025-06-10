@@ -58,7 +58,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-charcoal-gradient pt-16 pb-8">
+    <footer className="bg-midnight-950 pt-16 pb-8">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -66,11 +66,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="font-playfair text-2xl font-bold">
-                <span className="text-gold-400">LUXE</span>
-                <span className="text-white ml-2">IMÓVEIS</span>
+                <span className="text-champagne-400">BOTTICELLI</span>
+                <span className="text-platinum-100 ml-2">IMÓVEIS</span>
               </div>
             </div>
-            <p className="text-white/70 mb-6 leading-relaxed">
+            <p className="text-platinum-300 mb-6 leading-relaxed">
               Especialistas em propriedades de alto padrão em São Paulo. 
               Experiências imobiliárias exclusivas para clientes exigentes.
             </p>
@@ -79,7 +79,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white/70 hover:text-gold-400 hover:bg-gold-400/20 transition-all duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-platinum-300 hover:text-champagne-400 hover:bg-champagne-400/20 transition-all duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-playfair text-xl font-semibold text-white mb-4">
+            <h3 className="font-playfair text-xl font-semibold text-platinum-100 mb-4">
               Navegação
             </h3>
             <ul className="space-y-2">
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-white/70 hover:text-gold-400 transition-colors duration-300"
+                    className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300"
                   >
                     {link.name}
                   </button>
@@ -109,7 +109,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="font-playfair text-xl font-semibold text-white mb-4">
+            <h3 className="font-playfair text-xl font-semibold text-platinum-100 mb-4">
               Recursos
             </h3>
             <ul className="space-y-2">
@@ -117,7 +117,7 @@ const Footer = () => {
                 <li key={resource.name}>
                   <a
                     href={resource.href}
-                    className="text-white/70 hover:text-gold-400 transition-colors duration-300"
+                    className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300"
                   >
                     {resource.name}
                   </a>
@@ -128,19 +128,19 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-playfair text-xl font-semibold text-white mb-4">
+            <h3 className="font-playfair text-xl font-semibold text-platinum-100 mb-4">
               Newsletter VIP
             </h3>
-            <p className="text-white/70 mb-4">
+            <p className="text-platinum-300 mb-4">
               Receba as melhores oportunidades de investimento
             </p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="Seu email"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white placeholder-white/50 focus:outline-none focus:border-gold-400"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-platinum-100 placeholder-platinum-400 focus:outline-none focus:border-champagne-400"
               />
-              <button className="px-4 py-2 bg-gold-gradient text-white rounded-r-lg hover:shadow-lg transition-all duration-300">
+              <button className="px-4 py-2 bg-champagne-gradient text-white rounded-r-lg hover:shadow-lg transition-all duration-300">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
@@ -152,15 +152,15 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Luxe Résidences. Todos os direitos reservados.
+            <p className="text-platinum-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Botticelli Imóveis. Todos os direitos reservados.
             </p>
-            <div className="flex items-center space-x-6 text-sm text-white/60">
+            <div className="flex items-center space-x-6 text-sm text-platinum-400">
               <span>CRECI: 123.456-F</span>
-              <a href="#" className="hover:text-gold-400 transition-colors">
+              <a href="#" className="hover:text-champagne-400 transition-colors">
                 Política de Privacidade
               </a>
-              <a href="#" className="hover:text-gold-400 transition-colors">
+              <a href="#" className="hover:text-champagne-400 transition-colors">
                 Termos de Uso
               </a>
             </div>
