@@ -13,7 +13,7 @@ const PropertiesSection = () => {
       specs: '4 suítes, 5 banheiros, 580m²',
       badge: 'TOP VENDAS',
       badgeColor: 'bg-blue-500',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Jardins'
     },
     {
@@ -23,7 +23,7 @@ const PropertiesSection = () => {
       price: 'R$ 18.500.000',
       specs: '5 suítes, 6 banheiros, 860m²',
       badge: null,
-      image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Morumbi'
     },
     {
@@ -34,7 +34,7 @@ const PropertiesSection = () => {
       specs: '6 suítes, 7 banheiros, 950m²',
       badge: 'LANÇAMENTO',
       badgeColor: 'bg-green-500',
-      image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1560449752-3fd4bdff26b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Moema'
     },
     {
@@ -44,7 +44,7 @@ const PropertiesSection = () => {
       price: 'R$ 8.900.000',
       specs: '4 suítes, 5 banheiros, 450m²',
       badge: null,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1560448075-bb485b067938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Alphaville'
     },
     {
@@ -56,7 +56,7 @@ const PropertiesSection = () => {
       specs: '5 suítes, 6 banheiros, 750m²',
       badge: 'VENDIDO',
       badgeColor: 'bg-red-500',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Jardins'
     },
     {
@@ -67,7 +67,7 @@ const PropertiesSection = () => {
       specs: '4 suítes master, 6 banheiros, 650m²',
       badge: 'EXCLUSIVO',
       badgeColor: 'bg-gold-500',
-      image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Moema'
     }
   ];
