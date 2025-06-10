@@ -3,17 +3,24 @@ import { useState, useMemo } from 'react';
 import { Property } from '../data/propertyData';
 
 export const usePropertyFilter = (properties: Property[]) => {
-  const [activeFilter, setActiveFilter] = useState('Todos');
+  const [activeFilter, setActiveFilter] = useState<string>('Todos');
 
   const filteredProperties = useMemo(() => {
+    console.log(`Filtrando por: ${activeFilter}`);
+    console.log(`Total de propriedades: ${properties.length}`);
+    
     if (activeFilter === 'Todos') {
+      console.log('Mostrando todas as propriedades');
       return properties;
     }
-    return properties.filter(property => property.category === activeFilter);
-  }, [activeFilter, properties]);
+    
+    const filtered = properties.filter(property => property.category === activeFilter);
+    console.log(`Propriedades filtradas: ${filtered.length}`);
+    return filtered;
+  }, [properties, activeFilter]);
 
   const handleFilterClick = (filter: string) => {
-    console.log(`Filtro clicado: ${filter}`);
+    console.log(`Mudando filtro de ${activeFilter} para ${filter}`);
     setActiveFilter(filter);
   };
 
