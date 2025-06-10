@@ -3,7 +3,7 @@ import React from 'react';
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '5511991112222';
+    const phoneNumber = '5511976116202';
     const message = encodeURIComponent('Olá Felipe! Gostaria de saber mais sobre as propriedades de luxo disponíveis.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -29,8 +29,8 @@ const WhatsAppFloat = () => {
 
       {/* Contact Tooltip */}
       <div className="fixed bottom-28 right-6 bg-white px-4 py-2 rounded-lg shadow-lg z-40 animate-bounce">
-        <p className="text-sm font-semibold text-charcoal-900">Fale com Felipe!</p>
-        <p className="text-xs text-charcoal-600">Corretor Especialista</p>
+        <p className="text-sm font-semibold text-midnight-900">Fale com Felipe!</p>
+        <p className="text-xs text-midnight-600">Corretor Especialista</p>
       </div>
     </>
   );

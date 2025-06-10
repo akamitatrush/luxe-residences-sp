@@ -53,18 +53,55 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Luxury color palette
+				// Premium luxury color palette
+				platinum: {
+					50: '#fefefe',
+					100: '#fdfdfd',
+					200: '#f8f8f8',
+					300: '#e8e8e8',
+					400: '#d1d1d1',
+					500: '#b8b8b8',
+					600: '#9a9a9a',
+					700: '#7c7c7c',
+					800: '#5e5e5e',
+					900: '#404040'
+				},
+				midnight: {
+					50: '#f8f9fa',
+					100: '#f1f3f4',
+					200: '#e8eaed',
+					300: '#dadce0',
+					400: '#bdc1c6',
+					500: '#9aa0a6',
+					600: '#80868b',
+					700: '#5f6368',
+					800: '#3c4043',
+					900: '#1a1a1b',
+					950: '#0f0f10'
+				},
 				gold: {
-					50: '#fdfbf7',
-					100: '#faf6ee',
-					200: '#f4ebda',
-					300: '#e0ccaa',
-					400: '#d4b88a',
-					500: '#c9a46d',
-					600: '#b8935a',
-					700: '#9a7b4a',
-					800: '#7d6540',
-					900: '#665436'
+					50: '#fdfcf8',
+					100: '#faf8f1',
+					200: '#f4f0e1',
+					300: '#e8ddc7',
+					400: '#d6c49a',
+					500: '#c8ad7d',
+					600: '#b8956b',
+					700: '#9c7d58',
+					800: '#82674a',
+					900: '#6b543f'
+				},
+				champagne: {
+					50: '#fefdfb',
+					100: '#fdfaf5',
+					200: '#faf5ea',
+					300: '#f4ecd8',
+					400: '#e9d9bc',
+					500: '#ddc49e',
+					600: '#ceab82',
+					700: '#ba926a',
+					800: '#9a7858',
+					900: '#7f624a'
 				},
 				charcoal: {
 					50: '#f6f6f6',
@@ -79,7 +116,7 @@ export default {
 					900: '#202020',
 					950: '#101010'
 				},
-				pearl: '#f8f8f8',
+				pearl: '#fdfcfb',
 				whatsapp: '#25D366'
 			},
 			fontFamily: {
@@ -134,9 +171,11 @@ export default {
 				xs: '2px',
 			},
 			backgroundImage: {
-				'gold-gradient': 'linear-gradient(135deg, #c9a46d 0%, #d4b88a 50%, #e0ccaa 100%)',
-				'charcoal-gradient': 'linear-gradient(135deg, #101010 0%, #202020 100%)',
-				'hero-overlay': 'linear-gradient(135deg, rgba(16,16,16,0.8) 0%, rgba(32,32,32,0.6) 100%)'
+				'gold-gradient': 'linear-gradient(135deg, #c8ad7d 0%, #d6c49a 50%, #e8ddc7 100%)',
+				'champagne-gradient': 'linear-gradient(135deg, #ddc49e 0%, #e9d9bc 50%, #f4ecd8 100%)',
+				'midnight-gradient': 'linear-gradient(135deg, #0f0f10 0%, #1a1a1b 50%, #3c4043 100%)',
+				'platinum-gradient': 'linear-gradient(135deg, #e8e8e8 0%, #f8f8f8 100%)',
+				'hero-overlay': 'linear-gradient(135deg, rgba(15,15,16,0.85) 0%, rgba(26,26,27,0.7) 100%)'
 			}
 		}
 	},
