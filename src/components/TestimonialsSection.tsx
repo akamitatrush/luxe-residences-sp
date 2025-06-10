@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
       id: 1,
       name: 'Fernanda Lima',
       position: 'CEO - Luxury Brands',
-      content: 'Rafael não apenas encontrou a propriedade perfeita, mas superou todas as expectativas. Seu conhecimento do mercado de luxo é incomparável.',
+      content: 'Felipe demonstrou um conhecimento excepcional do mercado imobiliário de luxo em São Paulo. Ele não apenas encontrou o apartamento dos meus sonhos no Jardins, mas também negociou um preço 15% abaixo do valor de mercado. Durante todo o processo, que durou 3 meses, Felipe esteve disponível 24/7, me atualizando sobre cada detalhe. Sua rede de contatos é impressionante - conseguiu agilizar a documentação e até indicou os melhores arquitetos para a reforma. Recomendo Felipe para qualquer pessoa que busca excelência no mercado de alto padrão.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       id: 2,
       name: 'Roberto Tavares',
       position: 'Diretor - Finance Corp',
-      content: 'Profissionalismo exemplar e discrição absoluta. Rafael entende as necessidades de clientes exigentes e entrega resultados excepcionais.',
+      content: 'Após uma experiência frustrante com outros corretores, encontrar Felipe foi um divisor de águas. Procurava um penthouse em Moema há mais de um ano, e Felipe conseguiu acesso exclusivo a uma propriedade que nem estava no mercado ainda. O nível de discrição e profissionalismo dele é incomparável - todas as visitas foram agendadas fora do horário comercial para manter minha privacidade. Felipe também me apresentou ao melhor advogado imobiliário da cidade, garantindo que toda documentação fosse perfeita. O investimento já valorizou 22% em apenas 8 meses.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
       id: 3,
       name: 'Marina Santos',
       position: 'Empresária - Tech Innovation',
-      content: 'A experiência foi impecável do início ao fim. Rafael conseguiu negociar condições que jamais imaginei possíveis.',
+      content: 'Felipe superou todas as minhas expectativas ao encontrar um apartamento triplex único na Vila Madalena. Sua abordagem consultiva foi impressionante - ele realmente entendeu meu estilo de vida e necessidades antes de me mostrar qualquer propriedade. Durante a negociação, Felipe conseguiu que o vendedor incluísse 3 vagas de garagem e fizesse todas as reformas que eu queria antes da entrega. Além disso, ele coordenou toda a mudança, desde a contratação da empresa até o agendamento com o porteiro. É difícil encontrar alguém tão dedicado e competente no mercado imobiliário.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       id: 4,
       name: 'Carlos Mendonça',
       position: 'Investidor Internacional',
-      content: 'Sua rede de contatos e conhecimento do mercado de alto padrão são únicos. Recomendo sem hesitação.',
+      content: 'Como investidor estrangeiro, precisava de alguém que entendesse tanto o mercado local quanto as complexidades legais para não-residentes. Felipe foi muito além das suas obrigações - ele me acompanhou pessoalmente ao Banco Central para abertura de conta, me apresentou aos melhores contadores especializados em clientes internacionais, e até me ajudou com questões de câmbio. Nos últimos 2 anos, adquiri 4 propriedades através dele, todas com rentabilidade acima de 8% ao ano. Sua análise de mercado é precisa e suas indicações de bairros em ascensão foram certeiras. Felipe se tornou meu parceiro de confiança no Brasil.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     }
@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
             Clientes <span className="text-gold-400">Satisfeitos</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto font-light">
-            Experiências que falam por si só - a excelência reconhecida pelos nossos clientes
+            Experiências que falam por si só - a excelência reconhecida pelos clientes do Felipe
           </p>
         </div>
 
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
         {/* CTA */}
         <div className="text-center mt-16 scroll-fade-in">
           <button className="btn-gold">
-            Ver Mais Depoimentos
+            Fale com Felipe - Ver Mais Depoimentos
           </button>
         </div>
       </div>

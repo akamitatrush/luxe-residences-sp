@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -181,10 +180,23 @@
     @apply opacity-100 translate-y-0;
   }
 
-  /* WhatsApp floating button */
+  /* WhatsApp floating button - Enhanced */
   .whatsapp-float {
     @apply fixed bottom-6 right-6 bg-whatsapp text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:shadow-whatsapp/50 transition-all duration-300 hover:scale-110 z-50;
     animation: float 3s ease-in-out infinite;
+  }
+
+  /* WhatsApp color */
+  .bg-whatsapp {
+    background-color: #25D366;
+  }
+  
+  .text-whatsapp {
+    color: #25D366;
+  }
+  
+  .shadow-whatsapp {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
   }
 
   /* Loading screen */
@@ -204,6 +216,12 @@
   .form-input-dark {
     @apply w-full px-4 py-3 rounded-lg border border-gold-500/30 bg-charcoal-800/80 text-white placeholder-gray-400 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20 transition-all duration-300;
   }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Custom scrollbar */
@@ -228,4 +246,3 @@
 ::selection {
   background: rgba(201, 164, 109, 0.3);
 }
-
