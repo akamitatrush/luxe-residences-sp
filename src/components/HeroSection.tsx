@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -18,20 +19,32 @@ const HeroSection = () => {
 
   const luxuryImages = [
     {
+      url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Lançamento - Torre Residencial de Luxo"
+    },
+    {
       url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
-      alt: "Apartamento de Luxo - Sala de Estar"
+      alt: "Apartamento de Luxo - Sala de Estar Moderna"
     },
     {
       url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
-      alt: "Apartamento de Luxo - Cozinha Moderna"
+      alt: "Apartamento de Luxo - Cozinha Gourmet"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Lançamento - Apartamento com Vista Panorâmica"
     },
     {
       url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
-      alt: "Apartamento de Luxo - Quarto Master"
+      alt: "Apartamento de Luxo - Suíte Master"
     },
     {
       url: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
-      alt: "Apartamento de Luxo - Varanda com Vista"
+      alt: "Apartamento de Luxo - Terraço com Piscina"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Lançamento - Lobby de Alto Padrão"
     },
     {
       url: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
@@ -45,6 +58,13 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <Carousel 
           className="w-full h-full"
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: false,
+              stopOnMouseEnter: false,
+            }),
+          ]}
           opts={{
             align: "start",
             loop: true,
@@ -52,7 +72,7 @@ const HeroSection = () => {
         >
           <CarouselContent className="h-screen">
             {luxuryImages.map((image, index) => (
-              <CarouselItem key={index} className="relative h-full">
+              <CarouselItem key={index} className="relative h-full hero-carousel-item">
                 <img 
                   src={image.url}
                   alt={image.alt}
