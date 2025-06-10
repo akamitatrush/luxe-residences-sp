@@ -7,10 +7,10 @@ const PropertiesSection = () => {
   const properties = [
     {
       id: 1,
-      name: 'Residencial Jardins Époque',
+      name: 'Apartamento Jardins Époque',
       location: 'Jardins, São Paulo',
       price: 'R$ 12.900.000',
-      specs: '4 quartos, 5 banheiros, 580m²',
+      specs: '4 suítes, 5 banheiros, 580m²',
       badge: 'TOP VENDAS',
       badgeColor: 'bg-blue-500',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -18,20 +18,20 @@ const PropertiesSection = () => {
     },
     {
       id: 2,
-      name: 'Palazzo Morumbi',
+      name: 'Apartamento Palazzo Morumbi',
       location: 'Morumbi, São Paulo',
       price: 'R$ 18.500.000',
-      specs: '5 quartos, 6 banheiros, 860m²',
+      specs: '5 suítes, 6 banheiros, 860m²',
       badge: null,
       image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Morumbi'
     },
     {
       id: 3,
-      name: 'Elysium Moema',
+      name: 'Apartamento Elysium Moema',
       location: 'Moema, São Paulo',
       price: 'R$ 21.750.000',
-      specs: '6 quartos, 7 banheiros, 950m²',
+      specs: '6 suítes, 7 banheiros, 950m²',
       badge: 'LANÇAMENTO',
       badgeColor: 'bg-green-500',
       image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -39,21 +39,21 @@ const PropertiesSection = () => {
     },
     {
       id: 4,
-      name: 'Mansão Alphaville Elite',
+      name: 'Apartamento Alphaville Elite',
       location: 'Alphaville, São Paulo',
       price: 'R$ 8.900.000',
-      specs: '6 quartos, 8 banheiros, 1200m²',
+      specs: '4 suítes, 5 banheiros, 450m²',
       badge: null,
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Alphaville'
     },
     {
       id: 5,
-      name: 'Casa Moderna Jardins',
+      name: 'Apartamento Moderno Jardins',
       location: 'Jardins, São Paulo',
       price: 'R$ 15.200.000',
       originalPrice: 'R$ 16.800.000',
-      specs: '5 quartos, 7 banheiros, 750m²',
+      specs: '5 suítes, 6 banheiros, 750m²',
       badge: 'VENDIDO',
       badgeColor: 'bg-red-500',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -64,7 +64,7 @@ const PropertiesSection = () => {
       name: 'Penthouse Moema Premium',
       location: 'Moema, São Paulo',
       price: 'R$ 28.500.000',
-      specs: '4 quartos, 6 banheiros, 650m²',
+      specs: '4 suítes master, 6 banheiros, 650m²',
       badge: 'EXCLUSIVO',
       badgeColor: 'bg-gold-500',
       image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -84,10 +84,10 @@ const PropertiesSection = () => {
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="subheading-luxury text-charcoal-900 mb-6">
-            Empreendimentos <span className="text-gold-500">Exclusivos</span>
+            Apartamentos de <span className="text-gold-500">Alto Padrão</span>
           </h2>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
-            Seleção criteriosa de propriedades que redefinem o conceito de luxo urbano
+            Seleção criteriosa de apartamentos de luxo que redefinem o conceito de sofisticação urbana
           </p>
         </div>
 
@@ -169,7 +169,7 @@ const PropertiesSection = () => {
         {/* CTA */}
         <div className="text-center mt-16 scroll-fade-in">
           <button className="btn-gold">
-            Ver Todos os Empreendimentos
+            Ver Todos os Apartamentos
           </button>
         </div>
       </div>
