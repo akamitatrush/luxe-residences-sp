@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const PropertiesSection = () => {
@@ -12,7 +13,7 @@ const PropertiesSection = () => {
       specs: '4 suítes, 5 banheiros, 580m²',
       badge: 'TOP VENDAS',
       badgeColor: 'bg-blue-500',
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Jardins'
     },
     {
@@ -21,7 +22,8 @@ const PropertiesSection = () => {
       location: 'Morumbi, São Paulo',
       price: 'R$ 18.500.000',
       specs: '5 suítes, 6 banheiros, 860m²',
-      badge: null,
+      badge: 'EXCLUSIVO',
+      badgeColor: 'bg-gold-500',
       image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Morumbi'
     },
@@ -42,7 +44,8 @@ const PropertiesSection = () => {
       location: 'Alphaville, São Paulo',
       price: 'R$ 8.900.000',
       specs: '4 suítes, 5 banheiros, 450m²',
-      badge: null,
+      badge: 'OPORTUNIDADE',
+      badgeColor: 'bg-blue-500',
       image: 'https://images.unsplash.com/photo-1560448075-bb485b067938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Alphaville'
     },
@@ -68,22 +71,39 @@ const PropertiesSection = () => {
       badgeColor: 'bg-gold-500',
       image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Moema'
+    },
+    {
+      id: 7,
+      name: 'Residencial Morumbi Luxury',
+      location: 'Morumbi, São Paulo',
+      price: 'R$ 22.800.000',
+      specs: '5 suítes, 7 banheiros, 820m²',
+      badge: 'NOVO',
+      badgeColor: 'bg-green-500',
+      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Morumbi'
+    },
+    {
+      id: 8,
+      name: 'Alphaville Residencial Plus',
+      location: 'Alphaville, São Paulo',
+      price: 'R$ 11.500.000',
+      specs: '4 suítes, 5 banheiros, 520m²',
+      badge: 'TOP VENDAS',
+      badgeColor: 'bg-blue-500',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Alphaville'
     }
   ];
 
   const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
 
-  console.log('Active filter:', activeFilter);
-  console.log('Properties:', properties);
-  
   const filteredProperties = activeFilter === 'Todos' 
     ? properties 
-    : properties.filter(property => {
-        console.log(`Checking property ${property.name} with category ${property.category} against filter ${activeFilter}`);
-        return property.category === activeFilter;
-      });
+    : properties.filter(property => property.category === activeFilter);
 
-  console.log('Filtered properties:', filteredProperties);
+  console.log('Active filter:', activeFilter);
+  console.log('Filtered properties count:', filteredProperties.length);
 
   return (
     <section id="properties" className="py-20 bg-pearl">
