@@ -1,11 +1,11 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 
 const PropertiesSection = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
 
-  // Move o array de propriedades para fora do componente ou use useMemo sem dependências
-  const properties = useMemo(() => [
+  // Array de propriedades com dados estáticos
+  const properties = [
     {
       id: 1,
       name: 'Apartamento Jardins Époque',
@@ -95,35 +95,24 @@ const PropertiesSection = () => {
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Alphaville'
     }
-  ], []); // Array vazio como dependência para manter a referência estável
+  ];
 
   const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
 
-  const filteredProperties = useMemo(() => {
-    console.log('useMemo: Filtering properties for:', activeFilter);
-    console.log('useMemo: Total properties:', properties.length);
-    
+  // Função para filtrar propriedades
+  const getFilteredProperties = () => {
     if (activeFilter === 'Todos') {
-      console.log('useMemo: Returning all properties');
       return properties;
     }
-    
-    const filtered = properties.filter(property => {
-      const matches = property.category === activeFilter;
-      console.log(`useMemo: ${property.name} (${property.category}) matches ${activeFilter}: ${matches}`);
-      return matches;
-    });
-    
-    console.log('useMemo: Final filtered result:', filtered.length, 'properties');
-    return filtered;
-  }, [activeFilter, properties]);
-
-  const handleFilterClick = (filter: string) => {
-    console.log(`Button clicked: ${filter}`);
-    console.log('Current active filter before change:', activeFilter);
-    setActiveFilter(filter);
-    console.log('Filter changed to:', filter);
+    return properties.filter(property => property.category === activeFilter);
   };
+
+  const handleFilterClick = (filter) => {
+    console.log(`Filtro clicado: ${filter}`);
+    setActiveFilter(filter);
+  };
+
+  const displayedProperties = getFilteredProperties();
 
   return (
     <section id="properties" className="py-20 bg-pearl">
@@ -158,14 +147,14 @@ const PropertiesSection = () => {
         {/* Debug Info */}
         <div className="text-center mb-4">
           <p className="text-sm text-charcoal-500">
-            Filtro ativo: <strong>{activeFilter}</strong> | Apartamentos encontrados: <strong>{filteredProperties.length}</strong>
+            Filtro ativo: <strong>{activeFilter}</strong> | Apartamentos encontrados: <strong>{displayedProperties.length}</strong>
           </p>
         </div>
 
         {/* Properties Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProperties.length > 0 ? (
-            filteredProperties.map((property, index) => (
+          {displayedProperties.length > 0 ? (
+            displayedProperties.map((property, index) => (
               <div
                 key={property.id}
                 className="property-card scroll-fade-in"
