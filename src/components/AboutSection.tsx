@@ -4,9 +4,7 @@ import React from 'react';
 const AboutSection = () => {
   const specialties = [
     'Propriedades de Alto Padrão',
-    'Apartamentos de Luxo',
-    'Casas Exclusivas',
-    'Penthouses Premium'
+    'Apartamentos de Luxo'
   ];
 
   const awards = [
