@@ -36,8 +36,8 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="font-playfair text-2xl font-bold">
-                <span className="text-gold-400">LUXE</span>
-                <span className="text-white ml-2">RÉSIDENCES</span>
+                <span className="text-gold-400">BOTTICELLI</span>
+                <span className="text-white ml-2">IMÓVEIS</span>
               </div>
             </div>
 

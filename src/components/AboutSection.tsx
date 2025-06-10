@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Rafael Moreira - Especialista em Luxo"
+                alt="Felipe Botticelli - Especialista em Luxo"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gold-gradient opacity-10 rounded-2xl"></div>
@@ -40,8 +40,8 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-lg text-charcoal-600 mb-6 leading-relaxed">
-              Rafael Moreira é reconhecido como o especialista em propriedades de alto padrão em São Paulo. 
-              Com mais de duas décadas de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
+              Felipe Botticelli é reconhecido como o especialista em propriedades de alto padrão em São Paulo. 
+              Com mais de 10 anos de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
               de luxo, oferecendo um serviço incomparável e resultados excepcionais.
             </p>
             
