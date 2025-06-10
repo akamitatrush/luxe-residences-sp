@@ -8,10 +8,10 @@ const AboutSection = () => {
   ];
 
   const awards = [
-    'Melhor Corretor Luxury 2023',
-    'Top Sales International',
-    'Excellence in Service',
-    'Luxury Real Estate Leader'
+    'Campeão Vendas PG 2023',
+    'Especialista Cyrella',
+    'Consultor VIP Alto Padrão',
+    'Especialista Consultoria Financeira Imóveis'
   ];
 
   return (
@@ -28,7 +28,7 @@ const AboutSection = () => {
               />
               <div className="absolute inset-0 bg-gold-gradient opacity-10 rounded-2xl"></div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gold-gradient rounded-full flex items-center justify-center text-white font-bold text-xl shadow-2xl">
-                RM
+                FB
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const AboutSection = () => {
             
             <p className="text-lg text-charcoal-600 mb-6 leading-relaxed">
               Felipe Botticelli é reconhecido como o especialista em propriedades de alto padrão em São Paulo. 
-              Com mais de 10 anos de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
+              Com mais de 7  anos de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
               de luxo, oferecendo um serviço incomparável e resultados excepcionais.
             </p>
             
