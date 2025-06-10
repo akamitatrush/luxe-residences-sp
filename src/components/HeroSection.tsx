@@ -11,13 +11,26 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img 
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
-          alt="Luxury Apartment Background"
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source 
+            src="https://cdn.pixabay.com/video/2023/04/24/159049-822043648_large.mp4" 
+            type="video/mp4" 
+          />
+          {/* Fallback image caso o vídeo não carregue */}
+          <img 
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+            alt="Luxury Apartment Background"
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 bg-hero-overlay"></div>
       </div>
 
