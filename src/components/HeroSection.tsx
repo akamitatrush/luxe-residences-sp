@@ -21,12 +21,17 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         >
           <source 
-            src="https://cdn.pixabay.com/video/2023/04/24/159049-822043648_large.mp4" 
+            src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69fabf212b842076e40dc55e1c6101efc&profile_id=165&oauth2_token_id=57447761" 
             type="video/mp4" 
           />
-          {/* Fallback image caso o vídeo não carregue */}
+          {/* Fallback para outro vídeo caso o primeiro não carregue */}
+          <source 
+            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
+            type="video/mp4" 
+          />
+          {/* Fallback image caso nenhum vídeo carregue */}
           <img 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
             alt="Luxury Apartment Background"
             className="w-full h-full object-cover"
           />
