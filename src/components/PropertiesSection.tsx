@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { properties, filters } from '../data/propertyData';
 import { Property } from '../data/propertyData';
@@ -56,7 +55,7 @@ const PropertiesSection = () => {
           {filteredProperties.length > 0 ? (
             filteredProperties.map((property, index) => (
               <PropertyCard 
-                key={`${property.id}-${activeFilter}`}
+                key={property.id} // ✅ Removido o activeFilter da key
                 property={property}
                 index={index}
                 onClick={() => handlePropertyClick(property)}
