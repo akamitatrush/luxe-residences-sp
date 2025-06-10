@@ -7,10 +7,10 @@ const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const targetValues = {
-    years: 25,
-    sales: 2.5,
-    clients: 820,
-    awards: 14
+    years: 7,
+    sales: 25,
+    clients: 500,
+    awards: 3
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const StatsSection = () => {
 
       setCounters({
         years: Math.round(targetValues.years * progress),
-        sales: +(targetValues.sales * progress).toFixed(1),
+        sales: Math.round(targetValues.sales * progress),
         clients: Math.round(targetValues.clients * progress),
         awards: Math.round(targetValues.awards * progress)
       });
@@ -56,11 +56,19 @@ const StatsSection = () => {
   };
 
   const partners = [
-    { name: 'Cyrela', logo: 'C' },
-    { name: 'JHSF', logo: 'J' },
-    { name: 'Trisul', logo: 'T' },
-    { name: 'A.Yoshii', logo: 'Y' },
-    { name: 'Even', logo: 'E' }
+    { 
+      name: 'Cyrela', 
+      logo: (
+        <div className="flex flex-col items-center">
+          <span className="text-gold-400 font-playfair font-bold text-xl mb-1">CYRELA</span>
+          <span className="text-gold-400/70 text-xs">Brazil Realty</span>
+        </div>
+      )
+    },
+    { name: 'JHSF', logo: <span className="text-gold-400 font-playfair font-bold text-xl">JHSF</span> },
+    { name: 'Trisul', logo: <span className="text-gold-400 font-playfair font-bold text-xl">TRISUL</span> },
+    { name: 'A.Yoshii', logo: <span className="text-gold-400 font-playfair font-bold text-lg">A.YOSHII</span> },
+    { name: 'Even', logo: <span className="text-gold-400 font-playfair font-bold text-xl">EVEN</span> }
   ];
 
   return (
@@ -70,21 +78,21 @@ const StatsSection = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center scroll-fade-in">
             <div className="text-4xl lg:text-5xl font-playfair font-bold text-gold-400 mb-2">
-              {counters.years}
+              +{counters.years}
             </div>
             <div className="text-white/80 font-light">Anos de Excelência</div>
           </div>
           
           <div className="text-center scroll-fade-in">
             <div className="text-4xl lg:text-5xl font-playfair font-bold text-gold-400 mb-2">
-              {counters.sales}B
+              +{counters.sales}M
             </div>
-            <div className="text-white/80 font-light">Bilhões em Vendas</div>
+            <div className="text-white/80 font-light">Milhões em Vendas</div>
           </div>
           
           <div className="text-center scroll-fade-in">
             <div className="text-4xl lg:text-5xl font-playfair font-bold text-gold-400 mb-2">
-              {counters.clients}
+              +{counters.clients}
             </div>
             <div className="text-white/80 font-light">Clientes Satisfeitos</div>
           </div>
@@ -93,7 +101,7 @@ const StatsSection = () => {
             <div className="text-4xl lg:text-5xl font-playfair font-bold text-gold-400 mb-2">
               {counters.awards}
             </div>
-            <div className="text-white/80 font-light">Prêmios Internacionais</div>
+            <div className="text-white/80 font-light">Prêmios Reconhecimento</div>
           </div>
         </div>
 
@@ -102,8 +110,8 @@ const StatsSection = () => {
           <h3 className="text-center text-white/60 font-light mb-8 text-lg">Parceiros Exclusivos</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
             {partners.map((partner) => (
-              <div key={partner.name} className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full backdrop-blur-sm border border-gold-400/30 hover:border-gold-400 transition-all duration-300 hover:scale-110">
-                <span className="text-gold-400 font-playfair font-bold text-xl">{partner.logo}</span>
+              <div key={partner.name} className="flex items-center justify-center w-20 h-20 bg-white/10 rounded-full backdrop-blur-sm border border-gold-400/30 hover:border-gold-400 transition-all duration-300 hover:scale-110">
+                {partner.logo}
               </div>
             ))}
           </div>

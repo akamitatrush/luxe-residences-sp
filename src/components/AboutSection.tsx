@@ -41,7 +41,7 @@ const AboutSection = () => {
             
             <p className="text-lg text-charcoal-600 mb-6 leading-relaxed">
               Felipe Botticelli é reconhecido como o especialista em propriedades de alto padrão em São Paulo. 
-              Com mais de 7  anos de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
+              Com mais de 7 anos de experiência, ele estabeleceu um novo paradigma no mercado imobiliário 
               de luxo, oferecendo um serviço incomparável e resultados excepcionais.
             </p>
             
@@ -84,6 +84,26 @@ const AboutSection = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            {/* Signature */}
+            <div className="bg-gold-50 p-6 rounded-lg border-l-4 border-gold-500 mb-8">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-charcoal-900 font-playfair text-xl font-semibold mb-1">
+                    Felipe Botticelli
+                  </p>
+                  <p className="text-gold-600 font-medium">
+                    Especialista Alto Padrão
+                  </p>
+                  <p className="text-charcoal-600 text-sm">
+                    CRECI: 123.456-F | Cyrela Partner
+                  </p>
+                </div>
+                <div className="text-gold-500 text-4xl font-playfair font-bold">
+                  FB
+                </div>
               </div>
             </div>
 
