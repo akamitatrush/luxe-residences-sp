@@ -57,8 +57,8 @@ const ContactSection = () => {
         </svg>
       ),
       title: 'Email Executivo',
-      info: 'rafael@luxeresidences.com',
-      action: 'mailto:rafael@luxeresidences.com'
+      info: 'botticeli@cyrela.com',
+      action: 'mailto:botticeli@cyrela.com'
     },
     {
       icon: (

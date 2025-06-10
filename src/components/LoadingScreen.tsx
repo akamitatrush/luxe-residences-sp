@@ -6,7 +6,7 @@ const LoadingScreen = () => {
     <div className="loading-screen">
       <div className="text-center">
         <div className="loading-spinner mb-8"></div>
-        <h2 className="text-2xl font-playfair text-gold-400 mb-4">LUXE RÉSIDENCES</h2>
+        <h2 className="text-2xl font-playfair text-gold-400 mb-4">BOTTICELLI IMÓVEIS</h2>
         <p className="text-gold-300 font-light">Carregando experiência exclusiva...</p>
         <div className="flex justify-center mt-6">
           <div className="flex space-x-2">
