@@ -1,9 +1,11 @@
+
 import React, { useState, useMemo } from 'react';
 
 const PropertiesSection = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
 
-  const properties = [
+  // Move o array de propriedades para fora do componente ou use useMemo sem dependências
+  const properties = useMemo(() => [
     {
       id: 1,
       name: 'Apartamento Jardins Époque',
@@ -93,7 +95,7 @@ const PropertiesSection = () => {
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       category: 'Alphaville'
     }
-  ];
+  ], []); // Array vazio como dependência para manter a referência estável
 
   const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
 
@@ -165,7 +167,7 @@ const PropertiesSection = () => {
           {filteredProperties.length > 0 ? (
             filteredProperties.map((property, index) => (
               <div
-                key={`${property.id}-${activeFilter}`}
+                key={property.id}
                 className="property-card scroll-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
