@@ -102,6 +102,11 @@
     @apply border-2 border-gold-500 text-gold-500 font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-gold-500 hover:text-white hover:shadow-xl;
   }
 
+  /* Hero carousel specific styles */
+  .hero-carousel-item {
+    @apply transition-opacity duration-1000 ease-in-out;
+  }
+
   /* Glassmorphism effects */
   .glass {
     @apply backdrop-blur-md bg-white/10 border border-white/20;

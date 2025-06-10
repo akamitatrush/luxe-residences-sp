@@ -1,5 +1,12 @@
 
 import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -9,33 +16,54 @@ const HeroSection = () => {
     }
   };
 
+  const luxuryImages = [
+    {
+      url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Apartamento de Luxo - Sala de Estar"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Apartamento de Luxo - Cozinha Moderna"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Apartamento de Luxo - Quarto Master"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Apartamento de Luxo - Varanda com Vista"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80",
+      alt: "Apartamento de Luxo - Banheiro Sofisticado"
+    }
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
+      {/* Background Carousel */}
       <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
+        <Carousel 
+          className="w-full h-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
         >
-          <source 
-            src="https://player.vimeo.com/external/378108847.sd.mp4?s=435c892ea1c8bc0b5c5b5b2b5c5b5b2b5c5b5b2b&profile_id=165" 
-            type="video/mp4" 
-          />
-          {/* Fallback para vídeo de apartamento de luxo */}
-          <source 
-            src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" 
-            type="video/mp4" 
-          />
-          {/* Fallback image caso nenhum vídeo carregue */}
-          <img 
-            src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
-            alt="Luxury Apartment Interior"
-            className="w-full h-full object-cover"
-          />
-        </video>
+          <CarouselContent className="h-screen">
+            {luxuryImages.map((image, index) => (
+              <CarouselItem key={index} className="relative h-full">
+                <img 
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 border-white/30 text-white z-20" />
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 border-white/30 text-white z-20" />
+        </Carousel>
         <div className="absolute inset-0 bg-hero-overlay"></div>
       </div>
 
