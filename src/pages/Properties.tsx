@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { Search, Grid, List, Filter, MapPin, Bed, Bath, Square } from 'lucide-react';
+import { Search, Grid, List, Filter, MapPin, Bed, Bath, Square, ArrowLeft, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { properties, filters } from '../data/propertyData';
 import { Property } from '../data/propertyData';
 import { usePropertyFilter } from '../hooks/usePropertyFilter';
@@ -65,6 +66,25 @@ const Properties = () => {
   return (
     <div className="min-h-screen bg-pearl pt-20">
       <div className="container mx-auto px-6 py-8">
+        {/* Breadcrumb e Botão Voltar */}
+        <div className="flex items-center gap-4 mb-6">
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 text-charcoal-600 hover:text-gold-500 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span>Voltar</span>
+          </Link>
+          <div className="flex items-center gap-2 text-sm text-charcoal-500">
+            <Link to="/" className="hover:text-gold-500 transition-colors flex items-center gap-1">
+              <Home className="w-4 h-4" />
+              Início
+            </Link>
+            <span>/</span>
+            <span className="text-charcoal-900">Propriedades</span>
+          </div>
+        </div>
+
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-4">
