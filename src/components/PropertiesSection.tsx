@@ -1,4 +1,6 @@
+
 import React, { useState, useCallback, memo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { properties, filters } from '../data/propertyData';
 import { Property } from '../data/propertyData';
 import { usePropertyFilter } from '../hooks/usePropertyFilter';
@@ -10,6 +12,7 @@ import PropertyModal from './PropertyModal';
 const MemoizedPropertyCard = memo(PropertyCard);
 
 const PropertiesSection = () => {
+  const navigate = useNavigate();
   const { activeFilter, filteredProperties, handleFilterClick } = usePropertyFilter(properties);
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,7 +80,10 @@ const PropertiesSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => navigate('/propriedades')}
+            className="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             Ver Todos os Apartamentos
           </button>
         </div>

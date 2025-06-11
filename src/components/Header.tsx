@@ -1,9 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigationLinks = [
+    { name: 'Início', href: '/' },
+    { name: 'Propriedades', href: '/propriedades' },
+    { name: 'Sobre', href: '#about' },
+    { name: 'Jornada', href: '#journey' },
+    { name: 'Depoimentos', href: '#testimonials' },
+    { name: 'Contato', href: '#contact' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,21 +51,11 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('properties')} className="nav-link">
-                Empreendimentos
-              </button>
-              <button onClick={() => scrollToSection('about')} className="nav-link">
-                Sobre
-              </button>
-              <button onClick={() => scrollToSection('journey')} className="nav-link">
-                Jornada
-              </button>
-              <button onClick={() => scrollToSection('testimonials')} className="nav-link">
-                Depoimentos
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="nav-link">
-                Contato VIP
-              </button>
+              {navigationLinks.map((link, index) => (
+                <button key={index} onClick={() => scrollToSection(link.href)} className="nav-link">
+                  {link.name}
+                </button>
+              ))}
             </nav>
 
             {/* CTA Button */}
@@ -91,21 +89,11 @@ const Header = () => {
       }`}>
         <div className="absolute inset-0 bg-charcoal-950/95 backdrop-blur-md"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-8">
-          <button onClick={() => scrollToSection('properties')} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
-            Empreendimentos
-          </button>
-          <button onClick={() => scrollToSection('about')} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
-            Sobre
-          </button>
-          <button onClick={() => scrollToSection('journey')} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
-            Jornada
-          </button>
-          <button onClick={() => scrollToSection('testimonials')} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
-            Depoimentos
-          </button>
-          <button onClick={() => scrollToSection('contact')} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
-            Contato VIP
-          </button>
+          {navigationLinks.map((link, index) => (
+            <button key={index} onClick={() => scrollToSection(link.href)} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
+              {link.name}
+            </button>
+          ))}
           <button 
             onClick={() => scrollToSection('contact')}
             className="btn-gold mt-8"
