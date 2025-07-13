@@ -219,6 +219,8 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={channel.action}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => {
                     console.log('Canal de contato clicado:', channel.title, channel.action);
                   }}
