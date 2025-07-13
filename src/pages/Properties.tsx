@@ -29,6 +29,11 @@ const Properties = () => {
     property.location.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Debug logs para verificar o que está acontecendo
+  console.log('filteredProperties length:', filteredProperties.length);
+  console.log('searchTerm:', searchTerm);
+  console.log('searchFilteredProperties length:', searchFilteredProperties.length);
+
   // Ordenar propriedades
   const sortedProperties = [...searchFilteredProperties].sort((a, b) => {
     const priceA = parseInt(a.price.replace(/[^\d]/g, ''));
