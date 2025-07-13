@@ -51,14 +51,14 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-midnight-950">
+    <section id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
-          <h2 className="subheading-luxury text-platinum-100 mb-6">
+          <h2 className="subheading-luxury text-gray-900 mb-6">
             Clientes <span className="text-gray-600">Satisfeitos</span>
           </h2>
-          <p className="text-xl text-platinum-300 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             Experiências que falam por si só - a excelência reconhecida pelos clientes do Felipe
           </p>
         </div>
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="luxury-card-dark p-8 scroll-fade-in"
+              className="bg-white border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 p-8 scroll-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Quote Icon */}
@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Content */}
-              <p className="text-platinum-200 mb-6 leading-relaxed italic text-lg">
+              <p className="text-gray-700 mb-6 leading-relaxed italic text-lg">
                 "{testimonial.content}"
               </p>
 
@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-playfair font-semibold text-platinum-100">
+                  <h4 className="font-playfair font-semibold text-gray-900">
                     {testimonial.name}
                   </h4>
                   <p className="text-gray-600 text-sm">
