@@ -70,13 +70,13 @@ const Properties = () => {
         <div className="flex items-center gap-4 mb-6">
           <Link 
             to="/" 
-            className="flex items-center gap-2 text-charcoal-600 hover:text-champagne-500 transition-colors"
+            className="flex items-center gap-2 text-charcoal-600 hover:text-accent transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Voltar</span>
           </Link>
           <div className="flex items-center gap-2 text-sm text-charcoal-500">
-            <Link to="/" className="hover:text-champagne-500 transition-colors flex items-center gap-1">
+            <Link to="/" className="hover:text-accent transition-colors flex items-center gap-1">
               <Home className="w-4 h-4" />
               Início
             </Link>
@@ -123,7 +123,7 @@ const Properties = () => {
 
             <div className="flex gap-2">
               <Button
-                variant={viewMode === 'grid' ? 'default' : 'outline'}
+                variant={viewMode === 'grid' ? 'secondary' : 'outline'}
                 size="sm"
                 onClick={() => setViewMode('grid')}
                 className="flex-1"
@@ -132,7 +132,7 @@ const Properties = () => {
                 Grid
               </Button>
               <Button
-                variant={viewMode === 'list' ? 'default' : 'outline'}
+                variant={viewMode === 'list' ? 'secondary' : 'outline'}
                 size="sm"
                 onClick={() => setViewMode('list')}
                 className="flex-1"
@@ -193,7 +193,7 @@ const Properties = () => {
                               {property.name}
                             </h3>
                             <div className="flex items-center text-charcoal-600 mb-2">
-                              <MapPin className="w-4 h-4 mr-2 text-champagne-500" />
+                              <MapPin className="w-4 h-4 mr-2 text-accent" />
                               <span>{property.location}</span>
                             </div>
                           </div>
@@ -213,11 +213,11 @@ const Properties = () => {
                                 {property.originalPrice}
                               </span>
                             )}
-                            <span className="text-2xl font-playfair font-bold text-champagne-600">
+                            <span className="text-2xl font-playfair font-bold text-accent">
                               {property.price}
                             </span>
                           </div>
-                          <Button className="bg-champagne-500 hover:bg-champagne-600 text-white">
+                          <Button className="bg-accent hover:bg-accent/90 text-black">
                             Ver Detalhes
                           </Button>
                         </div>
