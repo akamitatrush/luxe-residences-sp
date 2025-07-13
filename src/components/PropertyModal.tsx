@@ -72,10 +72,27 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
             </div>
 
             <div className="pt-4 space-y-3">
-              <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+              <Button 
+                className="w-full bg-gray-900 hover:bg-gray-800 text-white"
+                onClick={() => {
+                  const message = `Olá Felipe! Gostaria de agendar uma visita para o imóvel: ${property.name} - ${property.location}`;
+                  const phoneNumber = "5511976116202";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+              >
                 Agendar Visita
               </Button>
-              <Button variant="outline" className="w-full border-slate-300 bg-white text-slate-700 hover:bg-slate-50">
+              <Button 
+                variant="outline" 
+                className="w-full border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                onClick={() => {
+                  const message = `Olá Felipe! Gostaria de solicitar mais informações sobre o imóvel: ${property.name} - ${property.location} - ${property.price}`;
+                  const phoneNumber = "5511976116202";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+              >
                 Solicitar Informações
               </Button>
             </div>

@@ -49,7 +49,7 @@ const ContactSection = () => {
       title: 'Felipe - WhatsApp VIP',
       info: 'Atendimento Imediato',
       email: 'felipe@cyrela.com',
-      action: 'https://wa.me/5511991112222',
+      action: 'https://wa.me/5511976116202',
       highlight: true
     }
   ];
@@ -260,7 +260,7 @@ const ContactSection = () => {
               <button 
                 onClick={() => {
                   const message = "Olá Felipe! Gostaria de agendar uma visita VIP para conhecer propriedades exclusivas.";
-                  const phoneNumber = "5511991112222";
+                  const phoneNumber = "5511976116202";
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                   window.open(whatsappUrl, '_blank');
                 }}
