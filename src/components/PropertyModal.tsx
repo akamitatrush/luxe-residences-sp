@@ -66,7 +66,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
             <div className="space-y-2">
               <h4 className="font-semibold text-charcoal-900">Categoria</h4>
-              <span className="inline-block px-3 py-1 bg-secondary text-primary rounded-full text-sm">
+              <span className="inline-block px-3 py-1 bg-secondary text-slate-600 rounded-full text-sm">
                 {property.category}
               </span>
             </div>

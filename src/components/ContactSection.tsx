@@ -225,7 +225,7 @@ const ContactSection = () => {
                   <span className="text-white font-playfair text-2xl font-bold">F</span>
                 </div>
                 <h3 className="font-playfair text-2xl font-semibold text-charcoal-900">Felipe</h3>
-                <p className="text-primary font-semibold">Corretor Especialista em Luxo</p>
+                <p className="text-slate-600 font-semibold">Corretor Especialista em Luxo</p>
                 <p className="text-sm text-charcoal-600 mt-2">Especialista em imóveis de alto padrão em São Paulo</p>
               </div>
             </div>
@@ -251,7 +251,7 @@ const ContactSection = () => {
                     </h4>
                     <p className="text-charcoal-600">{channel.info}</p>
                     {channel.highlight && (
-                      <p className="text-xs text-primary font-semibold">Contato Prioritário</p>
+                      <p className="text-xs text-slate-600 font-semibold">Contato Prioritário</p>
                     )}
                   </div>
                 </a>

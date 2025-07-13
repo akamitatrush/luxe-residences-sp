@@ -17,11 +17,11 @@
     --popover: 255 255 255;
     --popover-foreground: 30 30 30;
 
-    --primary: 30 30 30;
+    --primary: 71 85 105;
     --primary-foreground: 255 255 255;
 
     --secondary: 248 250 252;
-    --secondary-foreground: 30 30 30;
+    --secondary-foreground: 71 85 105;
 
     --muted: 241 245 249;
     --muted-foreground: 100 116 139;
@@ -49,7 +49,7 @@
     --popover: 24 24 27;
     --popover-foreground: 255 255 255;
 
-    --primary: 30 30 30;
+    --primary: 71 85 105;
     --primary-foreground: 255 255 255;
 
     --secondary: 39 39 42;

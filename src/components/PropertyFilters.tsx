@@ -20,7 +20,7 @@ const PropertyFilters: React.FC<PropertyFiltersProps> = ({
           onClick={() => onFilterClick(filter)}
           className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
             activeFilter === filter
-              ? 'bg-primary text-white shadow-lg'
+              ? 'bg-slate-700 text-white shadow-lg'
               : 'bg-white text-foreground hover:bg-muted border border-border shadow-sm'
           }`}
         >

@@ -94,7 +94,7 @@ const AboutSection = () => {
                   <p className="text-midnight-900 font-playfair text-xl font-semibold mb-1">
                     Felipe Botticelli
                   </p>
-                  <p className="text-primary font-medium">
+                  <p className="text-slate-600 font-medium">
                     Especialista Alto Padrão
                   </p>
                   <p className="text-midnight-600 text-sm">
