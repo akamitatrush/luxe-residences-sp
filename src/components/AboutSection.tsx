@@ -95,9 +95,6 @@ const AboutSection = () => {
                     CRECI: 123.456-F | Cyrela Partner
                   </p>
                 </div>
-                <div className="text-gray-800 text-4xl font-playfair font-bold">
-                  FB
-                </div>
               </div>
             </div>
 
@@ -129,13 +126,10 @@ const AboutSection = () => {
                     const parent = target.parentElement;
                     if (parent) {
                       parent.innerHTML = `
-                        <div class="w-full h-[500px] bg-muted flex items-center justify-center">
+                        <div class="w-full h-[500px] bg-gray-200 flex items-center justify-center">
                           <div class="text-center">
-                            <div class="w-32 h-32 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                              <span class="text-primary-foreground text-4xl font-playfair font-bold">FB</span>
-                            </div>
-                            <h3 class="text-xl font-playfair font-semibold text-foreground">Felipe Botticelli</h3>
-                            <p class="text-muted-foreground">Especialista em Alto Padrão</p>
+                            <h3 class="text-xl font-playfair font-semibold text-black">Felipe Botticelli</h3>
+                            <p class="text-gray-600">Especialista em Alto Padrão</p>
                           </div>
                         </div>
                       `;
