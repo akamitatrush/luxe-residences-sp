@@ -1,5 +1,6 @@
 
 import React from 'react';
+import felipeProfile from '../assets/felipe-profile.jpg';
 
 const AboutSection = () => {
   const specialties = [
@@ -22,7 +23,7 @@ const AboutSection = () => {
           <div className="scroll-fade-in">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={felipeProfile}
                 alt="Felipe Botticelli - Especialista em Luxo"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
