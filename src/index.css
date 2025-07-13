@@ -3,123 +3,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Ultra-Clean Design System */
-
 @layer base {
   :root {
-    /* Ultra-clean neutral base */
     --background: 255 255 255;
     --foreground: 15 23 42;
-
     --card: 255 255 255;
     --card-foreground: 15 23 42;
-
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
-
-    /* Premium primary - sophisticated charcoal */
     --primary: 15 23 42;
     --primary-foreground: 255 255 255;
-
-    /* Clean secondary */
     --secondary: 248 250 252;
     --secondary-foreground: 15 23 42;
-
-    /* Subtle muted */
     --muted: 241 245 249;
     --muted-foreground: 100 116 139;
-
-    /* Refined accent - sophisticated blue-grey */
     --accent: 71 85 105;
     --accent-foreground: 255 255 255;
-
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-
-    /* Clean borders */
     --border: 226 232 240;
     --input: 248 250 252;
     --ring: 71 85 105;
-
     --radius: 0.5rem;
-
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 13% 18%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(220 14% 28%));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    
-    /* Elegant shadows */
-    --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-large: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
 
   .dark {
     --background: 11 15 25;
     --foreground: 248 250 252;
-
     --card: 15 23 42;
     --card-foreground: 248 250 252;
-
     --popover: 15 23 42;
     --popover-foreground: 248 250 252;
-
     --primary: 248 250 252;
     --primary-foreground: 15 23 42;
-
     --secondary: 30 41 59;
     --secondary-foreground: 248 250 252;
-
     --muted: 30 41 59;
     --muted-foreground: 148 163 184;
-
     --accent: 100 116 139;
     --accent-foreground: 248 250 252;
-
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
-
     --border: 30 41 59;
     --input: 30 41 59;
     --ring: 100 116 139;
   }
-}
 
-@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     line-height: 1.6;
   }
+
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  /* Premium Button System */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:scale-105 active:scale-95;
-    box-shadow: var(--shadow-medium);
-  }
-  
-  .btn-primary:hover {
-    box-shadow: var(--shadow-large);
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground border border-border px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-muted hover:scale-105 active:scale-95;
-    box-shadow: var(--shadow-soft);
+    @apply bg-secondary text-secondary-foreground border border-border px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-muted hover:scale-105 active:scale-95 shadow-sm;
   }
   
   .btn-outline {
     @apply border border-primary text-primary bg-transparent px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary hover:text-primary-foreground hover:scale-105 active:scale-95;
   }
 
-  /* Legacy button support (temporary) */
   .btn-gold {
     @apply btn-primary;
   }
@@ -128,28 +86,14 @@
     @apply btn-outline;
   }
 
-  /* Premium Card System */
   .card-elegant {
-    @apply bg-card rounded-xl border border-border p-6 transition-all duration-300;
-    box-shadow: var(--shadow-soft);
-  }
-  
-  .card-elegant:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-2px);
+    @apply bg-card rounded-xl border border-border p-6 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5;
   }
   
   .card-premium {
-    @apply bg-card rounded-2xl border border-border p-8 transition-all duration-300;
-    box-shadow: var(--shadow-medium);
-  }
-  
-  .card-premium:hover {
-    box-shadow: var(--shadow-large);
-    transform: translateY(-4px);
+    @apply bg-card rounded-2xl border border-border p-8 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1;
   }
 
-  /* Premium Typography */
   .heading-display {
     @apply font-playfair font-bold text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-foreground;
   }
@@ -170,7 +114,6 @@
     @apply text-sm text-muted-foreground;
   }
 
-  /* Clean Navigation */
   .nav-link {
     @apply relative text-foreground/70 hover:text-foreground transition-all duration-200 font-medium;
   }
@@ -184,32 +127,18 @@
     @apply w-full;
   }
 
-  /* Elegant Property Cards */
   .property-card {
-    @apply relative overflow-hidden rounded-2xl group cursor-pointer transition-all duration-500;
-    box-shadow: var(--shadow-medium);
-  }
-  
-  .property-card:hover {
-    box-shadow: var(--shadow-xl);
-    transform: translateY(-8px);
+    @apply relative overflow-hidden rounded-2xl group cursor-pointer transition-all duration-500 shadow-md hover:shadow-xl hover:-translate-y-2;
   }
   
   .property-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500;
   }
 
-  /* Clean Form Elements */
   .form-input {
-    @apply w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition-all duration-200;
-    box-shadow: var(--shadow-soft);
-  }
-  
-  .form-input:focus {
-    box-shadow: var(--shadow-medium);
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition-all duration-200 shadow-sm focus:shadow-md;
   }
 
-  /* Elegant Glassmorphism */
   .glass {
     @apply backdrop-blur-xl bg-white/80 border border-white/20;
   }
@@ -218,7 +147,6 @@
     @apply backdrop-blur-xl bg-black/80 border border-white/10;
   }
 
-  /* Smooth Animations */
   .fade-in {
     @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
   }
@@ -227,17 +155,10 @@
     @apply opacity-100 translate-y-0;
   }
 
-  /* WhatsApp Float - Clean Style */
   .whatsapp-float {
-    @apply fixed bottom-6 right-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-50;
-    box-shadow: var(--shadow-large);
-  }
-  
-  .whatsapp-float:hover {
-    box-shadow: 0 20px 25px -5px rgb(34 197 94 / 0.25), 0 8px 10px -6px rgb(34 197 94 / 0.1);
+    @apply fixed bottom-6 right-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-50 shadow-lg hover:shadow-xl;
   }
 
-  /* Loading Screen */
   .loading-screen {
     @apply fixed inset-0 bg-background flex items-center justify-center z-50;
   }
@@ -247,7 +168,6 @@
   }
 }
 
-/* Clean Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -265,7 +185,6 @@
   background: hsl(var(--primary));
 }
 
-/* Clean Selection */
 ::selection {
   background: hsl(var(--accent) / 0.2);
   color: hsl(var(--foreground));
