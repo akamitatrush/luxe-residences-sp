@@ -266,7 +266,15 @@ const ContactSection = () => {
               <p className="text-charcoal-600 mb-4">
                 Visitas exclusivas com Felipe para conhecer as propriedades selecionadas especialmente para você.
               </p>
-              <button className="border-2 border-gray-600 text-gray-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 hover:text-white transition-all duration-300 w-full">
+              <button 
+                onClick={() => {
+                  const message = "Olá Felipe! Gostaria de agendar uma visita VIP para conhecer propriedades exclusivas.";
+                  const phoneNumber = "5511991112222";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+                className="border-2 border-gray-600 text-gray-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 hover:text-white transition-all duration-300 w-full"
+              >
                 Solicitar Agendamento com Felipe
               </button>
             </div>
