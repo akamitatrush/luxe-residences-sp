@@ -64,7 +64,7 @@ const Properties = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-white pt-20">
       <div className="container mx-auto px-6 py-8">
         {/* Breadcrumb e Botão Voltar */}
         <div className="flex items-center gap-4 mb-6">
