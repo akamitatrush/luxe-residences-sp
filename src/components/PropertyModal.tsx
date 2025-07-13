@@ -16,7 +16,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-playfair text-charcoal-900">
             {property.name}
