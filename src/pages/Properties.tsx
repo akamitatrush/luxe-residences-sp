@@ -64,33 +64,33 @@ const Properties = () => {
   };
 
   return (
-    <div className="min-h-screen bg-pearl pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <div className="container mx-auto px-6 py-8">
         {/* Breadcrumb e Botão Voltar */}
         <div className="flex items-center gap-4 mb-6">
           <Link 
             to="/" 
-            className="flex items-center gap-2 text-charcoal-600 hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-foreground hover:text-accent transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Voltar</span>
           </Link>
-          <div className="flex items-center gap-2 text-sm text-charcoal-500">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link to="/" className="hover:text-accent transition-colors flex items-center gap-1">
               <Home className="w-4 h-4" />
               Início
             </Link>
             <span>/</span>
-            <span className="text-charcoal-900">Propriedades</span>
+            <span className="text-foreground">Propriedades</span>
           </div>
         </div>
 
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-foreground mb-4">
             Nossos <span className="text-accent">Empreendimentos</span>
           </h1>
-          <p className="text-xl text-charcoal-600 max-w-3xl">
+          <p className="text-xl text-muted-foreground max-w-3xl">
             Descubra nossa seleção exclusiva de apartamentos de alto padrão em São Paulo
           </p>
         </div>
@@ -99,7 +99,7 @@ const Properties = () => {
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-charcoal-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
                 type="text"
                 placeholder="Buscar por nome ou localização..."
@@ -143,7 +143,7 @@ const Properties = () => {
             </div>
 
             <div className="text-right">
-              <span className="text-sm text-charcoal-600">
+              <span className="text-sm text-muted-foreground">
                 {sortedProperties.length} imóveis encontrados
               </span>
             </div>
@@ -189,10 +189,10 @@ const Properties = () => {
                       <div className="md:w-2/3 p-6">
                         <div className="flex justify-between items-start mb-4">
                           <div>
-                            <h3 className="font-playfair text-xl font-semibold text-charcoal-900 mb-2">
+                            <h3 className="font-playfair text-xl font-semibold text-foreground mb-2">
                               {property.name}
                             </h3>
-                            <div className="flex items-center text-charcoal-600 mb-2">
+                            <div className="flex items-center text-muted-foreground mb-2">
                               <MapPin className="w-4 h-4 mr-2 text-accent" />
                               <span>{property.location}</span>
                             </div>
@@ -204,12 +204,12 @@ const Properties = () => {
                           )}
                         </div>
                         
-                        <p className="text-sm text-charcoal-500 mb-4">{property.specs}</p>
+                        <p className="text-sm text-muted-foreground mb-4">{property.specs}</p>
                         
                         <div className="flex items-center justify-between">
                           <div>
                             {property.originalPrice && (
-                              <span className="text-sm text-charcoal-400 line-through mr-2">
+                              <span className="text-sm text-muted-foreground line-through mr-2">
                                 {property.originalPrice}
                               </span>
                             )}
@@ -263,7 +263,7 @@ const Properties = () => {
           </>
         ) : (
           <div className="text-center py-12">
-            <p className="text-charcoal-600 text-lg">
+            <p className="text-muted-foreground text-lg">
               Nenhum imóvel encontrado com os filtros selecionados.
             </p>
           </div>

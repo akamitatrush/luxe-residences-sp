@@ -51,7 +51,7 @@ const JourneySection = () => {
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="subheading-luxury text-platinum-100 mb-6">
-            Sua Jornada para o <span className="text-champagne-400">Lar dos Sonhos</span>
+            Sua Jornada para o <span className="text-accent">Lar dos Sonhos</span>
           </h2>
           <p className="text-xl text-platinum-300 max-w-3xl mx-auto font-light">
             Um processo meticuloso e personalizado que transforma sonhos em realidade
@@ -68,17 +68,17 @@ const JourneySection = () => {
             >
               {/* Progress Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-px bg-gradient-to-r from-champagne-400 to-transparent z-0"></div>
+                <div className="hidden lg:block absolute top-16 left-full w-full h-px bg-gradient-to-r from-accent to-transparent z-0"></div>
               )}
               
               <div className="relative z-10 text-center">
                 {/* Number */}
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-champagne-gradient rounded-full mb-6 text-midnight-900 font-playfair font-bold text-xl">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-yellow-500 rounded-full mb-6 text-black font-playfair font-bold text-xl">
                   {step.number}
                 </div>
                 
                 {/* Icon */}
-                <div className="flex justify-center mb-4 text-champagne-400">
+                <div className="flex justify-center mb-4 text-accent">
                   {step.icon}
                 </div>
                 

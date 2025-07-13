@@ -41,7 +41,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
           {/* Detalhes */}
           <div className="space-y-4">
             <div className="flex items-center text-charcoal-600">
-              <MapPin className="w-5 h-5 mr-2 text-champagne-500" />
+              <MapPin className="w-5 h-5 mr-2 text-accent" />
               <span>{property.location}</span>
             </div>
 
@@ -58,7 +58,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                     {property.originalPrice}
                   </span>
                 )}
-                <span className="text-3xl font-playfair font-bold text-champagne-600">
+                <span className="text-3xl font-playfair font-bold text-accent">
                   {property.price}
                 </span>
               </div>
@@ -66,16 +66,16 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
             <div className="space-y-2">
               <h4 className="font-semibold text-charcoal-900">Categoria</h4>
-              <span className="inline-block px-3 py-1 bg-champagne-100 text-champagne-800 rounded-full text-sm">
+              <span className="inline-block px-3 py-1 bg-secondary text-primary rounded-full text-sm">
                 {property.category}
               </span>
             </div>
 
             <div className="pt-4 space-y-3">
-              <Button className="w-full bg-champagne-500 hover:bg-champagne-600 text-white">
+              <Button className="w-full bg-accent hover:bg-accent/90 text-black">
                 Agendar Visita
               </Button>
-              <Button variant="outline" className="w-full border-champagne-500 text-champagne-600 hover:bg-champagne-50">
+              <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent/10">
                 Solicitar Informações
               </Button>
             </div>

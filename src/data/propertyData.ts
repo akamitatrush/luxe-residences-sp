@@ -31,7 +31,7 @@ export const properties: Property[] = [
     price: 'R$ 18.500.000',
     specs: '5 suítes, 6 banheiros, 860m²',
     badge: 'EXCLUSIVO',
-    badgeColor: 'bg-champagne-500',
+    badgeColor: 'bg-accent',
     image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'Morumbi'
   },
@@ -76,7 +76,7 @@ export const properties: Property[] = [
     price: 'R$ 28.500.000',
     specs: '4 suítes master, 6 banheiros, 650m²',
     badge: 'EXCLUSIVO',
-    badgeColor: 'bg-champagne-500',
+    badgeColor: 'bg-accent',
     image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'Moema'
   },

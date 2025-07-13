@@ -30,7 +30,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index, onClick })
         )}
 
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-          <button className="bg-champagne-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-champagne-600 transition-colors transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <button className="bg-accent text-black px-6 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
             Ver Detalhes
           </button>
         </div>
@@ -42,7 +42,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index, onClick })
         </h3>
         
         <div className="flex items-center text-charcoal-600 mb-3">
-          <MapPin className="w-4 h-4 mr-2 text-champagne-500" />
+          <MapPin className="w-4 h-4 mr-2 text-accent" />
           <span>{property.location}</span>
         </div>
         
@@ -55,7 +55,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index, onClick })
                 {property.originalPrice}
               </span>
             )}
-            <span className="text-2xl font-playfair font-bold text-champagne-600">
+            <span className="text-2xl font-playfair font-bold text-accent">
               {property.price}
             </span>
           </div>
