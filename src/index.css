@@ -186,6 +186,6 @@
 }
 
 ::selection {
-  background-color: #47556933; /* compatível e sem erro de parser */
+  background-color: hsl(var(--accent) / 0.2);
   color: hsl(var(--foreground));
 }
