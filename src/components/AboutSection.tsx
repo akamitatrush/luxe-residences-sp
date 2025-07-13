@@ -82,7 +82,7 @@ const AboutSection = () => {
             </div>
 
             {/* Card do Felipe */}
-            <div className="bg-card border border-border rounded-lg p-6 mb-8">
+            <div className="bg-gray-100 border border-gray-200 rounded-lg p-6 mb-8">
               <div className="flex items-center justify-between">
                 <div>
                   <h4 className="font-playfair text-xl font-semibold text-black mb-1">
