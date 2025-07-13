@@ -19,7 +19,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
-          <div className="scroll-fade-in">
+          <div>
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src="/lovable-uploads/705e9803-5462-480f-9b2c-cb2dde8c7682.png"
@@ -33,7 +33,7 @@ const AboutSection = () => {
           </div>
 
           {/* Content */}
-          <div className="scroll-fade-in">
+          <div>
             <h2 className="subheading-luxury text-midnight-900 mb-6">
               Especialista em <span className="text-gray-600">Luxo Exclusivo</span>
             </h2>
