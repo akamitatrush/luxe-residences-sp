@@ -211,7 +211,7 @@
 
   /* Luxury form styles */
   .form-input {
-    @apply w-full px-4 py-3 rounded-lg border border-border bg-background backdrop-blur-sm focus:border-muted-foreground focus:ring-2 focus:ring-muted-foreground/20 transition-all duration-300;
+    @apply w-full px-4 py-3 rounded-lg border-2 border-black bg-white text-black placeholder-gray-500 focus:border-gray-600 focus:ring-2 focus:ring-gray-300 transition-all duration-300;
   }
   
   .form-input-dark {
