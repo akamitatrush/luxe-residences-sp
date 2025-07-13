@@ -81,7 +81,7 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="subheading-luxury text-charcoal-900 mb-6">
-            Fale com <span className="text-accent">Felipe</span> - Seu Corretor Especialista
+            Fale com <span className="text-gray-600">Felipe</span> - Seu Corretor Especialista
           </h2>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
             Conecte-se com Felipe e inicie sua jornada rumo à propriedade dos seus sonhos
@@ -155,7 +155,7 @@ const ContactSection = () => {
                         value="whatsapp"
                         checked={formData.preference === 'whatsapp'}
                         onChange={handleInputChange}
-                        className="mr-2 text-accent"
+                        className="mr-2 text-gray-600"
                       />
                       WhatsApp
                     </label>
@@ -166,7 +166,7 @@ const ContactSection = () => {
                         value="phone"
                         checked={formData.preference === 'phone'}
                         onChange={handleInputChange}
-                        className="mr-2 text-accent"
+                        className="mr-2 text-gray-600"
                       />
                       Telefone
                     </label>
@@ -177,7 +177,7 @@ const ContactSection = () => {
                         value="email"
                         checked={formData.preference === 'email'}
                         onChange={handleInputChange}
-                        className="mr-2 text-accent"
+                        className="mr-2 text-gray-600"
                       />
                       Email
                     </label>
@@ -221,7 +221,7 @@ const ContactSection = () => {
             {/* Felipe's Profile Card */}
             <div className="luxury-card p-8 mb-8 bg-gradient-to-br from-secondary to-muted">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-accent to-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white font-playfair text-2xl font-bold">F</span>
                 </div>
                 <h3 className="font-playfair text-2xl font-semibold text-charcoal-900">Felipe</h3>
@@ -237,11 +237,11 @@ const ContactSection = () => {
                   key={index}
                   href={channel.action}
                   className={`luxury-card p-6 flex items-center hover:scale-105 transition-all duration-300 block ${
-                    channel.highlight ? 'ring-2 ring-accent bg-gradient-to-r from-secondary to-muted' : ''
+                    channel.highlight ? 'ring-2 ring-gray-400 bg-gradient-to-r from-secondary to-muted' : ''
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white mr-4 ${
-                    channel.highlight ? 'bg-whatsapp' : 'bg-gradient-to-br from-accent to-yellow-500'
+                    channel.highlight ? 'bg-whatsapp' : 'bg-gray-600'
                   }`}>
                     {channel.icon}
                   </div>

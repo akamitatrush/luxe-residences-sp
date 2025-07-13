@@ -41,7 +41,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
           {/* Detalhes */}
           <div className="space-y-4">
             <div className="flex items-center text-charcoal-600">
-              <MapPin className="w-5 h-5 mr-2 text-accent" />
+              <MapPin className="w-5 h-5 mr-2 text-gray-600" />
               <span>{property.location}</span>
             </div>
 
@@ -58,7 +58,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
                     {property.originalPrice}
                   </span>
                 )}
-                <span className="text-3xl font-playfair font-bold text-accent">
+                <span className="text-3xl font-playfair font-bold text-gray-900">
                   {property.price}
                 </span>
               </div>
@@ -72,10 +72,10 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
             </div>
 
             <div className="pt-4 space-y-3">
-              <Button className="w-full bg-accent hover:bg-accent/90 text-black">
+              <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
                 Agendar Visita
               </Button>
-              <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent/10">
+              <Button variant="outline" className="w-full border-gray-600 text-gray-600 hover:bg-gray-50">
                 Solicitar Informações
               </Button>
             </div>

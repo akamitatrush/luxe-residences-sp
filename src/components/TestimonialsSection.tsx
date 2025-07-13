@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <svg
         key={index}
-        className={`w-5 h-5 ${index < rating ? 'text-accent' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${index < rating ? 'text-gray-600' : 'text-gray-300'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="subheading-luxury text-platinum-100 mb-6">
-            Clientes <span className="text-accent">Satisfeitos</span>
+            Clientes <span className="text-gray-600">Satisfeitos</span>
           </h2>
           <p className="text-xl text-platinum-300 max-w-3xl mx-auto font-light">
             Experiências que falam por si só - a excelência reconhecida pelos clientes do Felipe
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Quote Icon */}
-              <div className="text-accent mb-4">
+              <div className="text-gray-600 mb-4">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
                   <h4 className="font-playfair font-semibold text-platinum-100">
                     {testimonial.name}
                   </h4>
-                  <p className="text-accent text-sm">
+                  <p className="text-gray-600 text-sm">
                     {testimonial.position}
                   </p>
                 </div>
