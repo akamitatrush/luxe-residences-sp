@@ -201,7 +201,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`btn-gold w-full ${isLoading ? 'opacity-75 cursor-not-allowed' : ''}`}
+                  className={`bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 w-full ${isLoading ? 'opacity-75 cursor-not-allowed' : ''}`}
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">
@@ -266,7 +266,7 @@ const ContactSection = () => {
               <p className="text-charcoal-600 mb-4">
                 Visitas exclusivas com Felipe para conhecer as propriedades selecionadas especialmente para você.
               </p>
-              <button className="btn-outline-gold w-full">
+              <button className="border-2 border-gray-600 text-gray-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 hover:text-white transition-all duration-300 w-full">
                 Solicitar Agendamento com Felipe
               </button>
             </div>

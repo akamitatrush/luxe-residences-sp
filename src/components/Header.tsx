@@ -85,7 +85,7 @@ const Header = () => {
             <div className="hidden lg:block">
               <button 
                 onClick={() => handleNavigation({ name: 'Contato', href: '#contact', type: 'scroll' })}
-                className="btn-gold"
+                className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
               >
                 Agendar Consultoria
               </button>
@@ -119,7 +119,7 @@ const Header = () => {
           ))}
           <button 
             onClick={() => handleNavigation({ name: 'Contato', href: '#contact', type: 'scroll' })}
-            className="btn-gold mt-8"
+            className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 mt-8"
           >
             Agendar Consultoria
           </button>

@@ -85,20 +85,20 @@
 
 @layer components {
   /* Premium luxury button styles */
-  .btn-gold {
+  .btn-neutral {
     @apply bg-white text-foreground border border-border font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 relative overflow-hidden hover:bg-muted hover:text-foreground;
   }
   
-  .btn-gold::before {
+  .btn-neutral::before {
     content: '';
     @apply absolute top-0 left-0 w-0 h-full bg-white opacity-20 transition-all duration-300;
   }
   
-  .btn-gold:hover::before {
+  .btn-neutral:hover::before {
     @apply w-full;
   }
   
-  .btn-outline-gold {
+  .btn-outline-neutral {
     @apply border-2 border-muted-foreground text-muted-foreground font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-muted-foreground hover:text-white hover:shadow-xl;
   }
 

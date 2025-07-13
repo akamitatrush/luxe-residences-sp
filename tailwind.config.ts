@@ -79,29 +79,29 @@ export default {
 					900: '#1a1a1b',
 					950: '#0f0f10'
 				},
-				gold: {
-					50: '#fdfcf8',
-					100: '#faf8f1',
-					200: '#f4f0e1',
-					300: '#e8ddc7',
-					400: '#d6c49a',
-					500: '#c8ad7d',
-					600: '#b8956b',
-					700: '#9c7d58',
-					800: '#82674a',
-					900: '#6b543f'
+				gray: {
+					50: '#f9fafb',
+					100: '#f3f4f6',
+					200: '#e5e7eb',
+					300: '#d1d5db',
+					400: '#9ca3af',
+					500: '#6b7280',
+					600: '#4b5563',
+					700: '#374151',
+					800: '#1f2937',
+					900: '#111827'
 				},
-				champagne: {
-					50: '#fefdfb',
-					100: '#fdfaf5',
-					200: '#faf5ea',
-					300: '#f4ecd8',
-					400: '#e9d9bc',
-					500: '#ddc49e',
-					600: '#ceab82',
-					700: '#ba926a',
-					800: '#9a7858',
-					900: '#7f624a'
+				slate: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0',
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b',
+					600: '#475569',
+					700: '#334155',
+					800: '#1e293b',
+					900: '#0f172a'
 				},
 				charcoal: {
 					50: '#f6f6f6',
@@ -171,8 +171,8 @@ export default {
 				xs: '2px',
 			},
 			backgroundImage: {
-				'gold-gradient': 'linear-gradient(135deg, #c8ad7d 0%, #d6c49a 50%, #e8ddc7 100%)',
-				'champagne-gradient': 'linear-gradient(135deg, #ddc49e 0%, #e9d9bc 50%, #f4ecd8 100%)',
+				'gray-gradient': 'linear-gradient(135deg, #6b7280 0%, #9ca3af 50%, #d1d5db 100%)',
+				'slate-gradient': 'linear-gradient(135deg, #64748b 0%, #94a3b8 50%, #cbd5e1 100%)',
 				'midnight-gradient': 'linear-gradient(135deg, #0f0f10 0%, #1a1a1b 50%, #3c4043 100%)',
 				'platinum-gradient': 'linear-gradient(135deg, #e8e8e8 0%, #f8f8f8 100%)',
 				'hero-overlay': 'linear-gradient(135deg, rgba(15,15,16,0.85) 0%, rgba(26,26,27,0.7) 100%)'

@@ -100,13 +100,13 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center scroll-fade-in">
           <button 
             onClick={() => scrollToSection('properties')}
-            className="btn-gold w-full sm:w-auto"
+            className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 w-full sm:w-auto"
           >
             Descubra Empreendimentos Exclusivos
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="btn-outline-gold w-full sm:w-auto"
+            className="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-300 hover:text-gray-900 transition-all duration-300 w-full sm:w-auto"
           >
             Tour Virtual
           </button>
