@@ -19,7 +19,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, index, onClick })
         <img
           src={property.image}
           alt={property.name}
-          className="w-full h-56 object-cover transition-all duration-300"
+          className="w-full h-80 object-cover transition-all duration-300"
         />
         
         {property.badge && (

@@ -15,17 +15,6 @@ export interface Property {
 export const properties: Property[] = [
   {
     id: 1,
-    name: 'Apartamento Jardins Époque',
-    location: 'Jardins, São Paulo',
-    price: 'R$ 12.900.000',
-    specs: '4 suítes, 5 banheiros, 580m²',
-    badge: 'TOP VENDAS',
-    badgeColor: 'bg-blue-500',
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Jardins'
-  },
-  {
-    id: 2,
     name: 'Apartamento Palazzo Morumbi',
     location: 'Morumbi, São Paulo',
     price: 'R$ 18.500.000',
@@ -34,6 +23,17 @@ export const properties: Property[] = [
     badgeColor: 'bg-slate-600',
     image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'Morumbi'
+  },
+  {
+    id: 2,
+    name: 'Penthouse Moema Premium',
+    location: 'Moema, São Paulo',
+    price: 'R$ 28.500.000',
+    specs: '4 suítes master, 6 banheiros, 650m²',
+    badge: 'EXCLUSIVO',
+    badgeColor: 'bg-slate-600',
+    image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Moema'
   },
   {
     id: 3,
@@ -48,17 +48,28 @@ export const properties: Property[] = [
   },
   {
     id: 4,
-    name: 'Apartamento Alphaville Elite',
-    location: 'Alphaville, São Paulo',
-    price: 'R$ 8.900.000',
-    specs: '4 suítes, 5 banheiros, 450m²',
-    badge: 'OPORTUNIDADE',
-    badgeColor: 'bg-blue-500',
-    image: 'https://images.unsplash.com/photo-1560448075-bb485b067938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Alphaville'
+    name: 'Residencial Morumbi Luxury',
+    location: 'Morumbi, São Paulo',
+    price: 'R$ 22.800.000',
+    specs: '5 suítes, 7 banheiros, 820m²',
+    badge: 'NOVO',
+    badgeColor: 'bg-green-500',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Morumbi'
   },
   {
     id: 5,
+    name: 'Apartamento Jardins Époque',
+    location: 'Jardins, São Paulo',
+    price: 'R$ 12.900.000',
+    specs: '4 suítes, 5 banheiros, 580m²',
+    badge: 'TOP VENDAS',
+    badgeColor: 'bg-blue-500',
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Jardins'
+  },
+  {
+    id: 6,
     name: 'Apartamento Moderno Jardins',
     location: 'Jardins, São Paulo',
     price: 'R$ 15.200.000',
@@ -70,37 +81,26 @@ export const properties: Property[] = [
     category: 'Jardins'
   },
   {
-    id: 6,
-    name: 'Penthouse Moema Premium',
-    location: 'Moema, São Paulo',
-    price: 'R$ 28.500.000',
-    specs: '4 suítes master, 6 banheiros, 650m²',
+    id: 7,
+    name: 'Apartamento Vila Nova Conceição Elite',
+    location: 'Vila Nova Conceição, São Paulo',
+    price: 'R$ 25.200.000',
+    specs: '4 suítes master, 5 banheiros, 720m²',
     badge: 'EXCLUSIVO',
     badgeColor: 'bg-slate-600',
-    image: 'https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Moema'
-  },
-  {
-    id: 7,
-    name: 'Residencial Morumbi Luxury',
-    location: 'Morumbi, São Paulo',
-    price: 'R$ 22.800.000',
-    specs: '5 suítes, 7 banheiros, 820m²',
-    badge: 'NOVO',
-    badgeColor: 'bg-green-500',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Morumbi'
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Vila Nova Conceição'
   },
   {
     id: 8,
-    name: 'Alphaville Residencial Plus',
-    location: 'Alphaville, São Paulo',
-    price: 'R$ 11.500.000',
-    specs: '4 suítes, 5 banheiros, 520m²',
-    badge: 'TOP VENDAS',
+    name: 'Apartamento Itaim Bibi Luxo',
+    location: 'Itaim Bibi, São Paulo',
+    price: 'R$ 19.800.000',
+    specs: '5 suítes, 6 banheiros, 680m²',
+    badge: 'OPORTUNIDADE',
     badgeColor: 'bg-blue-500',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    category: 'Alphaville'
+    image: 'https://images.unsplash.com/photo-1560448075-bb485b067938?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    category: 'Itaim Bibi'
   },
   {
     id: 9,
@@ -115,4 +115,4 @@ export const properties: Property[] = [
   }
 ];
 
-export const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Alphaville'];
+export const filters = ['Todos', 'Jardins', 'Moema', 'Morumbi', 'Vila Nova Conceição', 'Itaim Bibi'];
