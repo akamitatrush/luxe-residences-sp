@@ -66,7 +66,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
 
             <div className="space-y-2">
               <h4 className="font-semibold text-charcoal-900">Categoria</h4>
-              <span className="inline-block px-3 py-1 bg-secondary text-slate-600 rounded-full text-sm">
+              <span className="inline-block px-3 py-1 bg-white border border-slate-300 text-slate-700 rounded-full text-sm">
                 {property.category}
               </span>
             </div>
@@ -75,7 +75,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, isOpen, onClose
               <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
                 Agendar Visita
               </Button>
-              <Button variant="outline" className="w-full border-gray-600 text-gray-600 hover:bg-gray-50">
+              <Button variant="outline" className="w-full border-slate-300 bg-white text-slate-700 hover:bg-slate-50">
                 Solicitar Informações
               </Button>
             </div>
