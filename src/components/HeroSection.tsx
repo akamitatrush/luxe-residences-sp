@@ -89,35 +89,35 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-        <h1 className="heading-luxury text-white mb-6 scroll-fade-in">
-          Domínios de <span className="text-accent">Excelência</span> em São Paulo
+        <h1 className="heading-display text-white mb-6 fade-in">
+          Residências de <span className="text-white">Excelência</span> em São Paulo
         </h1>
         
-        <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed scroll-fade-in font-light">
-          Experiências imobiliárias exclusivas para clientes que transcendem o convencional
+        <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed fade-in">
+          Experiências imobiliárias exclusivas para clientes exigentes
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center scroll-fade-in">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in">
           <button 
             onClick={() => scrollToSection('properties')}
-            className="btn-gold w-full sm:w-auto"
+            className="btn-primary text-lg px-8 py-4 w-full sm:w-auto"
           >
-            Descubra Empreendimentos Exclusivos
+            Descobrir Empreendimentos
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="btn-outline-gold w-full sm:w-auto"
+            className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto bg-white/10 text-white border-white/20 hover:bg-white/20"
           >
-            Tour Virtual
+            Conhecer Processo
           </button>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-fade-in">
-          <div className="flex flex-col items-center text-white/70">
-            <span className="text-sm font-light mb-2">Explore</span>
-            <div className="w-px h-16 bg-accent/50 animate-pulse"></div>
-            <div className="w-2 h-2 bg-accent rounded-full animate-bounce mt-2"></div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 fade-in">
+          <div className="flex flex-col items-center text-white/60">
+            <span className="text-sm font-medium mb-3">Explore</span>
+            <div className="w-px h-12 bg-white/30"></div>
+            <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>

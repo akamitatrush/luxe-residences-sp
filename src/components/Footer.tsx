@@ -58,7 +58,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black pt-16 pb-8">
+    <footer className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -66,8 +66,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="font-playfair text-2xl font-bold">
-                <span className="text-accent">BOTTICELLI</span>
-                <span className="text-white ml-2">IMÓVEIS</span>
+                <span className="text-white">BOTTICELLI</span>
+                <span className="text-accent ml-2">IMÓVEIS</span>
               </div>
             </div>
             <p className="text-white/70 mb-6 leading-relaxed">
@@ -79,7 +79,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:text-accent hover:bg-accent/20 transition-all duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:text-accent hover:bg-white/20 transition-all duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -93,12 +93,12 @@ const Footer = () => {
             <h3 className="font-playfair text-xl font-semibold text-white mb-4">
               Navegação
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {navigationLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-white hover:text-accent transition-colors duration-300"
+                    className="text-white/70 hover:text-white transition-colors duration-300"
                   >
                     {link.name}
                   </button>
@@ -112,12 +112,12 @@ const Footer = () => {
             <h3 className="font-playfair text-xl font-semibold text-white mb-4">
               Recursos
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {resources.map((resource) => (
                 <li key={resource.name}>
                   <a
                     href={resource.href}
-                    className="text-white hover:text-accent transition-colors duration-300"
+                    className="text-white/70 hover:text-white transition-colors duration-300"
                   >
                     {resource.name}
                   </a>
@@ -140,7 +140,7 @@ const Footer = () => {
                 placeholder="Seu email"
                 className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white placeholder-white/50 focus:outline-none focus:border-accent"
               />
-              <button className="px-4 py-2 bg-gradient-to-r from-accent to-yellow-500 text-black rounded-r-lg hover:shadow-lg transition-all duration-300">
+              <button className="px-4 py-2 bg-accent text-white rounded-r-lg hover:bg-accent/90 transition-all duration-300">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
