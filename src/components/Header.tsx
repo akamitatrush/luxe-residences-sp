@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navigationLinks = [
-    { name: 'Início', href: '/' },
-    { name: 'Propriedades', href: '/propriedades' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Jornada', href: '#journey' },
-    { name: 'Depoimentos', href: '#testimonials' },
-    { name: 'Contato', href: '#contact' }
+    { name: 'Início', href: '/', type: 'route' },
+    { name: 'Propriedades', href: '/propriedades', type: 'route' },
+    { name: 'Sobre', href: '#about', type: 'scroll' },
+    { name: 'Jornada', href: '#journey', type: 'scroll' },
+    { name: 'Depoimentos', href: '#testimonials', type: 'scroll' },
+    { name: 'Contato', href: '#contact', type: 'scroll' }
   ];
 
   useEffect(() => {
@@ -26,10 +29,28 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (link: { name: string; href: string; type: string }) => {
+    if (link.type === 'route') {
+      // Navegação por rota
+      navigate(link.href);
+    } else if (link.type === 'scroll') {
+      // Se estamos na página Properties, voltar para Home primeiro
+      if (location.pathname === '/propriedades') {
+        navigate('/');
+        // Aguardar navegação e então fazer scroll
+        setTimeout(() => {
+          const element = document.getElementById(link.href.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        // Se já estamos na home, fazer scroll direto
+        const element = document.getElementById(link.href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -52,7 +73,7 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigationLinks.map((link, index) => (
-                <button key={index} onClick={() => scrollToSection(link.href)} className="nav-link">
+                <button key={index} onClick={() => handleNavigation(link)} className="nav-link">
                   {link.name}
                 </button>
               ))}
@@ -61,7 +82,7 @@ const Header = () => {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleNavigation({ name: 'Contato', href: '#contact', type: 'scroll' })}
                 className="btn-gold"
               >
                 Agendar Consultoria
@@ -90,12 +111,12 @@ const Header = () => {
         <div className="absolute inset-0 bg-charcoal-950/95 backdrop-blur-md"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-8">
           {navigationLinks.map((link, index) => (
-            <button key={index} onClick={() => scrollToSection(link.href)} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
+            <button key={index} onClick={() => handleNavigation(link)} className="text-white text-xl font-playfair hover:text-gold-400 transition-colors">
               {link.name}
             </button>
           ))}
           <button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => handleNavigation({ name: 'Contato', href: '#contact', type: 'scroll' })}
             className="btn-gold mt-8"
           >
             Agendar Consultoria
