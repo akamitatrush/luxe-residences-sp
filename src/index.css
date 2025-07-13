@@ -25,6 +25,8 @@
     --input: 248 250 252;
     --ring: 71 85 105;
     --radius: 0.5rem;
+
+    --accent-rgb: 71, 85, 105; /* Adicionado para compatibilidade */
   }
 
   .dark {
@@ -186,6 +188,6 @@
 }
 
 ::selection {
-  background: hsl(var(--accent) / 0.2);
+  background-color: rgba(var(--accent-rgb), 0.2);
   color: hsl(var(--foreground));
 }
