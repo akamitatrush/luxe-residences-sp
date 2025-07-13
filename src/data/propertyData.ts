@@ -101,6 +101,17 @@ export const properties: Property[] = [
     badgeColor: 'bg-blue-500',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     category: 'Alphaville'
+  },
+  {
+    id: 9,
+    name: 'Residencial Jardim Guedala Tower',
+    location: 'Jardim Guedala, São Paulo',
+    price: 'A partir de R$ 10.900.000',
+    specs: '348m² | 376m² | 393m² | 700m² - Entrega Dezembro 2029',
+    badge: 'NOVO',
+    badgeColor: 'bg-green-500',
+    image: '/lovable-uploads/4ec7e388-a1d8-4943-ade7-753579181003.png',
+    category: 'Jardins'
   }
 ];
 
