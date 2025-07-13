@@ -111,7 +111,7 @@ export const properties: Property[] = [
     badge: 'NOVO',
     badgeColor: 'bg-green-500',
     image: '/lovable-uploads/4ec7e388-a1d8-4943-ade7-753579181003.png',
-    category: 'Jardins'
+    category: 'Morumbi'
   }
 ];
 
