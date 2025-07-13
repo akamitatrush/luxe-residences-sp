@@ -236,6 +236,9 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={channel.action}
+                  onClick={(e) => {
+                    console.log('Canal de contato clicado:', channel.title, channel.action);
+                  }}
                   className={`bg-white border-2 ${
                     channel.highlight ? 'border-black' : 'border-gray-400'
                   } rounded-2xl shadow-lg p-6 flex items-center hover:scale-105 transition-all duration-300 block`}
