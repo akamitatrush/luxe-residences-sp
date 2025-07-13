@@ -1,6 +1,5 @@
 
 import React from 'react';
-import felipeProfile from '../assets/felipe-profile.jpg';
 
 const AboutSection = () => {
   const specialties = [
@@ -23,7 +22,7 @@ const AboutSection = () => {
           <div className="scroll-fade-in">
             <div className="relative">
               <img
-                src={felipeProfile}
+                src="https://scontent-lhr6-2.cdninstagram.com/v/t39.30808-6/460427611_18366829789105527_6550783623842648792_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=r34OkpwoSTEQ7kNvwFujbr5&_nc_oc=AdmwkO5n1iUEbJ7DDmfWuL5M7VG71Z1deFyRXtO27UJ4Ofdrg6xiRBhmCerUbsgXAoY&_nc_zt=23&_nc_ht=scontent-lhr6-2.cdninstagram.com&_nc_gid=URB0kle4OijykIVO3QD8DQ&oh=00_AfSrFlo-YEmeuSuVBNLUfiTGL1X7aI8ks43RGd4Zeg4-LQ&oe=687A0F09"
                 alt="Felipe Botticelli - Especialista em Luxo"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
