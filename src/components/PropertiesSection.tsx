@@ -31,15 +31,15 @@ const PropertiesSection = () => {
   }, []);
 
   return (
-    <section id="properties" className="py-20 bg-pearl">
+    <section id="properties" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-6">
-            Apartamentos de <span className="text-accent">Alto Padrão</span>
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-playfair font-bold text-gray-900 mb-8">
+            Apartamentos
           </h2>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
-            Seleção criteriosa de apartamentos de luxo que redefinem o conceito de sofisticação urbana
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+            Seleção de apartamentos de alto padrão em São Paulo
           </p>
         </div>
 
@@ -50,16 +50,15 @@ const PropertiesSection = () => {
           onFilterClick={handleFilterClick}
         />
 
-        {/* Debug Info */}
-        <div className="text-center mb-8">
-          <p className="text-sm text-charcoal-500">
-            Filtro ativo: <strong>{activeFilter}</strong> | 
-            Apartamentos encontrados: <strong>{filteredProperties.length}</strong>
+        {/* Info limpa */}
+        <div className="text-center mb-12">
+          <p className="text-gray-600 font-medium">
+            {filteredProperties.length} apartamentos disponíveis
           </p>
         </div>
 
-        {/* Properties Grid com transição suave */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 properties-grid">
+        {/* Properties Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProperties.length > 0 ? (
             filteredProperties.map((property, index) => (
               <MemoizedPropertyCard 
@@ -70,19 +69,19 @@ const PropertiesSection = () => {
               />
             ))
           ) : (
-            <div className="col-span-full text-center py-12">
-              <p className="text-charcoal-600 text-lg">
-                Nenhum apartamento encontrado para o filtro: <strong>{activeFilter}</strong>
+            <div className="col-span-full text-center py-16">
+              <p className="text-gray-600 text-xl">
+                Nenhum apartamento encontrado
               </p>
             </div>
           )}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <button 
             onClick={() => navigate('/propriedades')}
-            className="bg-accent hover:bg-accent/90 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-gray-900 hover:bg-gray-800 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300"
           >
             Ver Todos os Apartamentos
           </button>

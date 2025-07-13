@@ -65,38 +65,38 @@ const Properties = () => {
 
   return (
     <div className="min-h-screen bg-white pt-20">
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-6 py-12">
         {/* Breadcrumb e Botão Voltar */}
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex items-center gap-4 mb-8">
           <Link 
             to="/" 
-            className="flex items-center gap-2 text-foreground hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>Voltar</span>
+            <span className="font-medium">Voltar</span>
           </Link>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-accent transition-colors flex items-center gap-1">
+          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <Link to="/" className="hover:text-gray-900 transition-colors flex items-center gap-1">
               <Home className="w-4 h-4" />
               Início
             </Link>
             <span>/</span>
-            <span className="text-foreground">Propriedades</span>
+            <span className="text-gray-900 font-medium">Propriedades</span>
           </div>
         </div>
 
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-foreground mb-4">
-            Nossos <span className="text-accent">Empreendimentos</span>
+        <div className="mb-12 text-center">
+          <h1 className="text-5xl md:text-6xl font-playfair font-bold text-gray-900 mb-6">
+            Empreendimentos
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            Descubra nossa seleção exclusiva de apartamentos de alto padrão em São Paulo
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+            Apartamentos de alto padrão em São Paulo
           </p>
         </div>
 
         {/* Busca e Filtros */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <div className="bg-gray-50 rounded-2xl p-8 mb-12 border border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
@@ -143,7 +143,7 @@ const Properties = () => {
             </div>
 
             <div className="text-right">
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-gray-600 font-medium">
                 {sortedProperties.length} imóveis encontrados
               </span>
             </div>
@@ -175,7 +175,7 @@ const Properties = () => {
                 ) : (
                   <div
                     key={property.id}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                    className="bg-white rounded-2xl border border-gray-200 overflow-hidden cursor-pointer hover:border-gray-300 hover:shadow-lg transition-all duration-300"
                     onClick={() => handlePropertyClick(property)}
                   >
                     <div className="flex flex-col md:flex-row">
@@ -189,12 +189,12 @@ const Properties = () => {
                       <div className="md:w-2/3 p-6">
                         <div className="flex justify-between items-start mb-4">
                           <div>
-                            <h3 className="font-playfair text-xl font-semibold text-foreground mb-2">
+                            <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-3">
                               {property.name}
                             </h3>
-                            <div className="flex items-center text-muted-foreground mb-2">
-                              <MapPin className="w-4 h-4 mr-2 text-accent" />
-                              <span>{property.location}</span>
+                            <div className="flex items-center text-gray-600 mb-3">
+                              <MapPin className="w-5 h-5 mr-3 text-gray-400" />
+                              <span className="font-medium">{property.location}</span>
                             </div>
                           </div>
                           {property.badge && (
@@ -204,20 +204,20 @@ const Properties = () => {
                           )}
                         </div>
                         
-                        <p className="text-sm text-muted-foreground mb-4">{property.specs}</p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{property.specs}</p>
                         
                         <div className="flex items-center justify-between">
                           <div>
                             {property.originalPrice && (
-                              <span className="text-sm text-muted-foreground line-through mr-2">
+                              <span className="text-sm text-gray-400 line-through mr-3">
                                 {property.originalPrice}
                               </span>
                             )}
-                            <span className="text-2xl font-playfair font-bold text-accent">
+                            <span className="text-3xl font-playfair font-bold text-gray-900">
                               {property.price}
                             </span>
                           </div>
-                          <Button className="bg-accent hover:bg-accent/90 text-black">
+                          <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold">
                             Ver Detalhes
                           </Button>
                         </div>
