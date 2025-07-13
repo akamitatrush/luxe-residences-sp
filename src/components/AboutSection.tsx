@@ -22,7 +22,7 @@ const AboutSection = () => {
           <div className="scroll-fade-in">
             <div className="relative">
               <img
-                src="https://instagram.fgru5-1.fna.fbcdn.net/v/t39.30808-6/460427611_18366829789105527_6550783623842648792_n.jpg?stp=dst-jpegr_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5oZHIuZjMwODA4LmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fgru5-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QFNAixWwtJ_0xyEdYtnWaAWWuc806TRYVWYoXHYwXNA4xL0XqAqEI8D-YLl62b9ZYahlsKeMNFAu_0kG1P9S8q_&_nc_ohc=7nXw7p3bsQcQ7kNvwGEOtf5&_nc_gid=mCRoULNoNBsnHbz4JRyN7g&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzQ1ODY1MDg1MDI3NDk2NzY3NQ%3D%3D.3-ccb7-5&oh=00_AfMQzK94yzGKNMCM2js2SEskPsIqhooOZf1mQhQhnP1zMw&oe=684D7449&_nc_sid=7a9f4b"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Felipe Botticelli - Especialista em Luxo"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
