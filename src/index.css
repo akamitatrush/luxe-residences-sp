@@ -32,8 +32,8 @@
     --destructive: 220 38 38;
     --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
-    --input: 248 250 252;
+    --border: 203 213 225;
+    --input: 255 255 255;
     --ring: 100 116 139;
 
     --radius: 0.75rem;
