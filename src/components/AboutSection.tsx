@@ -144,10 +144,6 @@ const AboutSection = () => {
                 />
               </div>
               
-              {/* Badge decorativo */}
-              <div className="absolute -top-4 -right-4 bg-black text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
-                FB
-              </div>
             </div>
           </div>
           
