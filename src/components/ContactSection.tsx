@@ -76,29 +76,29 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-pearl">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 fade-in">
-          <h2 className="heading-section mb-6">
+        <div className="text-center mb-16 scroll-fade-in">
+          <h2 className="subheading-luxury text-charcoal-900 mb-6">
             Fale com <span className="text-accent">Felipe</span> - Seu Corretor Especialista
           </h2>
-          <p className="text-body max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
             Conecte-se com Felipe e inicie sua jornada rumo à propriedade dos seus sonhos
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
-          <div className="fade-in">
-            <div className="card-premium">
-              <h3 className="heading-card mb-6">
+          <div className="scroll-fade-in">
+            <div className="luxury-card p-8">
+              <h3 className="font-playfair text-2xl font-semibold text-charcoal-900 mb-6">
                 Solicitar Consultoria VIP com Felipe
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
+                  <label className="block text-charcoal-700 font-medium mb-2">
                     Nome Completo *
                   </label>
                   <input
@@ -114,7 +114,7 @@ const ContactSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-foreground font-medium mb-2">
+                    <label className="block text-charcoal-700 font-medium mb-2">
                       Telefone *
                     </label>
                     <input
@@ -128,7 +128,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-foreground font-medium mb-2">
+                    <label className="block text-charcoal-700 font-medium mb-2">
                       Email *
                     </label>
                     <input
@@ -144,10 +144,10 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
+                  <label className="block text-charcoal-700 font-medium mb-2">
                     Preferência de Contato
                   </label>
-                  <div className="flex gap-6">
+                  <div className="flex space-x-4">
                     <label className="flex items-center">
                       <input
                         type="radio"
@@ -185,7 +185,7 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label className="block text-foreground font-medium mb-2">
+                  <label className="block text-charcoal-700 font-medium mb-2">
                     Mensagem (Opcional)
                   </label>
                   <textarea
@@ -201,7 +201,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`btn-primary w-full ${isLoading ? 'opacity-75 cursor-not-allowed' : ''}`}
+                  className={`btn-gold w-full ${isLoading ? 'opacity-75 cursor-not-allowed' : ''}`}
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">
@@ -217,16 +217,16 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="fade-in">
+          <div className="scroll-fade-in">
             {/* Felipe's Profile Card */}
-            <div className="card-elegant bg-muted/50 mb-8">
+            <div className="luxury-card p-8 mb-8 bg-gradient-to-br from-secondary to-muted">
               <div className="text-center mb-6">
-                <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-accent to-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white font-playfair text-2xl font-bold">F</span>
                 </div>
-                <h3 className="heading-card">Felipe</h3>
-                <p className="text-accent font-semibold">Corretor Especialista em Luxo</p>
-                <p className="text-subtle mt-2">Especialista em imóveis de alto padrão em São Paulo</p>
+                <h3 className="font-playfair text-2xl font-semibold text-charcoal-900">Felipe</h3>
+                <p className="text-primary font-semibold">Corretor Especialista em Luxo</p>
+                <p className="text-sm text-charcoal-600 mt-2">Especialista em imóveis de alto padrão em São Paulo</p>
               </div>
             </div>
 
@@ -236,22 +236,22 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={channel.action}
-                  className={`card-elegant flex items-center hover:scale-105 transition-all duration-300 block ${
-                    channel.highlight ? 'ring-2 ring-accent/20 bg-accent/5' : ''
+                  className={`luxury-card p-6 flex items-center hover:scale-105 transition-all duration-300 block ${
+                    channel.highlight ? 'ring-2 ring-accent bg-gradient-to-r from-secondary to-muted' : ''
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white mr-4 ${
-                    channel.highlight ? 'bg-emerald-500' : 'bg-primary'
+                    channel.highlight ? 'bg-whatsapp' : 'bg-gradient-to-br from-accent to-yellow-500'
                   }`}>
                     {channel.icon}
                   </div>
                   <div>
-                    <h4 className="heading-card text-base">
+                    <h4 className="font-playfair font-semibold text-charcoal-900">
                       {channel.title}
                     </h4>
-                    <p className="text-body text-sm">{channel.info}</p>
+                    <p className="text-charcoal-600">{channel.info}</p>
                     {channel.highlight && (
-                      <p className="text-xs text-accent font-medium">Contato Prioritário</p>
+                      <p className="text-xs text-primary font-semibold">Contato Prioritário</p>
                     )}
                   </div>
                 </a>
@@ -259,14 +259,14 @@ const ContactSection = () => {
             </div>
 
             {/* Visit Scheduling Card */}
-            <div className="card-elegant mt-8">
-              <h4 className="heading-card mb-4">
+            <div className="luxury-card p-6 mt-8">
+              <h4 className="font-playfair text-xl font-semibold text-charcoal-900 mb-4">
                 Agendar Visita VIP com Felipe
               </h4>
-              <p className="text-body mb-4">
+              <p className="text-charcoal-600 mb-4">
                 Visitas exclusivas com Felipe para conhecer as propriedades selecionadas especialmente para você.
               </p>
-              <button className="btn-outline w-full">
+              <button className="btn-outline-gold w-full">
                 Solicitar Agendamento com Felipe
               </button>
             </div>
