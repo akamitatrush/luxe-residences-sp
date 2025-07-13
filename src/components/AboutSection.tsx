@@ -24,7 +24,7 @@ const AboutSection = () => {
               <img
                 src="https://scontent-lhr6-2.cdninstagram.com/v/t39.30808-6/460427611_18366829789105527_6550783623842648792_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=18de74&_nc_ohc=r34OkpwoSTEQ7kNvwFujbr5&_nc_oc=AdmwkO5n1iUEbJ7DDmfWuL5M7VG71Z1deFyRXtO27UJ4Ofdrg6xiRBhmCerUbsgXAoY&_nc_zt=23&_nc_ht=scontent-lhr6-2.cdninstagram.com&_nc_gid=URB0kle4OijykIVO3QD8DQ&oh=00_AfSrFlo-YEmeuSuVBNLUfiTGL1X7aI8ks43RGd4Zeg4-LQ&oe=687A0F09"
                 alt="Felipe Botticelli - Especialista em Luxo"
-                className="w-full h-[500px] object-cover object-center rounded-2xl shadow-2xl"
+                className="w-full h-[600px] object-cover object-center rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gray-200 opacity-10 rounded-2xl"></div>
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-2xl">
