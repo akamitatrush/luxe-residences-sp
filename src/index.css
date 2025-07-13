@@ -86,7 +86,7 @@
 @layer components {
   /* Premium luxury button styles */
   .btn-gold {
-    @apply bg-gradient-to-r from-accent to-yellow-500 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 relative overflow-hidden;
+    @apply bg-white text-foreground border border-border font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 relative overflow-hidden hover:bg-accent hover:text-accent-foreground;
   }
   
   .btn-gold::before {
