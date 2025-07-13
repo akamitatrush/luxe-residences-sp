@@ -91,7 +91,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
           <div className="scroll-fade-in">
-            <div className="luxury-card p-8">
+            <div className="bg-white border-2 border-black rounded-2xl shadow-lg p-8">
               <h3 className="font-playfair text-2xl font-semibold text-charcoal-900 mb-6">
                 Solicitar Consultoria VIP com Felipe
               </h3>
@@ -219,7 +219,7 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="scroll-fade-in">
             {/* Felipe's Profile Card */}
-            <div className="luxury-card p-8 mb-8 bg-gradient-to-br from-secondary to-muted">
+            <div className="bg-white border-2 border-black rounded-2xl shadow-lg p-8 mb-8">
               <div className="text-center mb-6">
                 <div className="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white font-playfair text-2xl font-bold">F</span>
@@ -236,9 +236,9 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={channel.action}
-                  className={`luxury-card p-6 flex items-center hover:scale-105 transition-all duration-300 block ${
-                    channel.highlight ? 'ring-2 ring-gray-400 bg-gradient-to-r from-secondary to-muted' : ''
-                  }`}
+                  className={`bg-white border-2 ${
+                    channel.highlight ? 'border-black' : 'border-gray-400'
+                  } rounded-2xl shadow-lg p-6 flex items-center hover:scale-105 transition-all duration-300 block`}
                 >
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white mr-4 ${
                     channel.highlight ? 'bg-whatsapp' : 'bg-gray-600'
@@ -259,7 +259,7 @@ const ContactSection = () => {
             </div>
 
             {/* Visit Scheduling Card */}
-            <div className="luxury-card p-6 mt-8">
+            <div className="bg-white border-2 border-black rounded-2xl shadow-lg p-6 mt-8">
               <h4 className="font-playfair text-xl font-semibold text-charcoal-900 mb-4">
                 Agendar Visita VIP com Felipe
               </h4>
