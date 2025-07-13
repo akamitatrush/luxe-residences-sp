@@ -200,8 +200,12 @@ const ContactSection = () => {
             {/* Felipe's Profile Card */}
             <div className="bg-white border-2 border-black rounded-2xl shadow-lg p-8 mb-8">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-playfair text-2xl font-bold">F</span>
+                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="/src/assets/felipe-professional.jpg" 
+                    alt="Felipe - Corretor Especialista" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-playfair text-2xl font-semibold text-charcoal-900">Felipe</h3>
                 <p className="text-slate-600 font-semibold">Corretor Especialista em Luxo</p>
