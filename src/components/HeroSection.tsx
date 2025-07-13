@@ -90,7 +90,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
         <h1 className="heading-luxury text-white mb-6 scroll-fade-in">
-          Domínios de <span className="text-champagne-400">Excelência</span> em São Paulo
+          Domínios de <span className="text-accent">Excelência</span> em São Paulo
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed scroll-fade-in font-light">
@@ -116,8 +116,8 @@ const HeroSection = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-fade-in">
           <div className="flex flex-col items-center text-white/70">
             <span className="text-sm font-light mb-2">Explore</span>
-            <div className="w-px h-16 bg-champagne-400/50 animate-pulse"></div>
-            <div className="w-2 h-2 bg-champagne-400 rounded-full animate-bounce mt-2"></div>
+            <div className="w-px h-16 bg-accent/50 animate-pulse"></div>
+            <div className="w-2 h-2 bg-accent rounded-full animate-bounce mt-2"></div>
           </div>
         </div>
       </div>

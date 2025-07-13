@@ -88,7 +88,7 @@ const Properties = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-4">
-            Nossos <span className="text-champagne-500">Empreendimentos</span>
+            Nossos <span className="text-accent">Empreendimentos</span>
           </h1>
           <p className="text-xl text-charcoal-600 max-w-3xl">
             Descubra nossa seleção exclusiva de apartamentos de alto padrão em São Paulo

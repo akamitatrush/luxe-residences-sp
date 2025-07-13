@@ -36,7 +36,7 @@ const PropertiesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-6">
-            Apartamentos de <span className="text-champagne-500">Alto Padrão</span>
+            Apartamentos de <span className="text-accent">Alto Padrão</span>
           </h2>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
             Seleção criteriosa de apartamentos de luxo que redefinem o conceito de sofisticação urbana
@@ -82,7 +82,7 @@ const PropertiesSection = () => {
         <div className="text-center mt-16">
           <button 
             onClick={() => navigate('/propriedades')}
-            className="bg-champagne-500 hover:bg-champagne-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-accent hover:bg-accent/90 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Ver Todos os Apartamentos
           </button>

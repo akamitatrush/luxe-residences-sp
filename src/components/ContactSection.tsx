@@ -81,7 +81,7 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="subheading-luxury text-charcoal-900 mb-6">
-            Fale com <span className="text-champagne-500">Felipe</span> - Seu Corretor Especialista
+            Fale com <span className="text-accent">Felipe</span> - Seu Corretor Especialista
           </h2>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto font-light">
             Conecte-se com Felipe e inicie sua jornada rumo à propriedade dos seus sonhos

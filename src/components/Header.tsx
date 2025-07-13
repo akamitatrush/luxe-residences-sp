@@ -67,7 +67,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="font-playfair text-2xl font-bold">
-                <span className="text-champagne-400">BOTTICELLI</span>
+                <span className="text-accent">BOTTICELLI</span>
                 <span className="text-white ml-2">IMÓVEIS</span>
               </div>
             </div>
@@ -113,7 +113,7 @@ const Header = () => {
         <div className="absolute inset-0 bg-charcoal-950/95 backdrop-blur-md"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-8">
           {navigationLinks.map((link, index) => (
-            <button key={index} onClick={() => handleNavigation(link)} className="text-white text-xl font-playfair hover:text-champagne-400 transition-colors">
+            <button key={index} onClick={() => handleNavigation(link)} className="text-white text-xl font-playfair hover:text-accent transition-colors">
               {link.name}
             </button>
           ))}
