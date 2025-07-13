@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <svg
         key={index}
-        className={`w-5 h-5 ${index < rating ? 'text-gold-400' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${index < rating ? 'text-champagne-400' : 'text-gray-300'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >

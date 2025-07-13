@@ -32,6 +32,12 @@ const Header = () => {
   const handleNavigation = (link: { name: string; href: string; type: string }) => {
     if (link.type === 'route') {
       navigate(link.href);
+      // Se for para a home, fazer scroll para o topo
+      if (link.href === '/') {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      }
     } else if (link.type === 'scroll') {
       if (location.pathname === '/propriedades') {
         navigate('/');

@@ -70,13 +70,13 @@ const Properties = () => {
         <div className="flex items-center gap-4 mb-6">
           <Link 
             to="/" 
-            className="flex items-center gap-2 text-charcoal-600 hover:text-gold-500 transition-colors"
+            className="flex items-center gap-2 text-charcoal-600 hover:text-champagne-500 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Voltar</span>
           </Link>
           <div className="flex items-center gap-2 text-sm text-charcoal-500">
-            <Link to="/" className="hover:text-gold-500 transition-colors flex items-center gap-1">
+            <Link to="/" className="hover:text-champagne-500 transition-colors flex items-center gap-1">
               <Home className="w-4 h-4" />
               Início
             </Link>
@@ -88,7 +88,7 @@ const Properties = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl md:text-5xl font-playfair font-bold text-charcoal-900 mb-4">
-            Nossos <span className="text-gold-500">Empreendimentos</span>
+            Nossos <span className="text-champagne-500">Empreendimentos</span>
           </h1>
           <p className="text-xl text-charcoal-600 max-w-3xl">
             Descubra nossa seleção exclusiva de apartamentos de alto padrão em São Paulo
@@ -193,7 +193,7 @@ const Properties = () => {
                               {property.name}
                             </h3>
                             <div className="flex items-center text-charcoal-600 mb-2">
-                              <MapPin className="w-4 h-4 mr-2 text-gold-500" />
+                              <MapPin className="w-4 h-4 mr-2 text-champagne-500" />
                               <span>{property.location}</span>
                             </div>
                           </div>
@@ -213,11 +213,11 @@ const Properties = () => {
                                 {property.originalPrice}
                               </span>
                             )}
-                            <span className="text-2xl font-playfair font-bold text-gold-600">
+                            <span className="text-2xl font-playfair font-bold text-champagne-600">
                               {property.price}
                             </span>
                           </div>
-                          <Button className="bg-gold-500 hover:bg-gold-600 text-white">
+                          <Button className="bg-champagne-500 hover:bg-champagne-600 text-white">
                             Ver Detalhes
                           </Button>
                         </div>
