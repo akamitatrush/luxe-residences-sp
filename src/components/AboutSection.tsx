@@ -27,7 +27,7 @@ const AboutSection = () => {
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gray-200 opacity-10 rounded-2xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-2xl">
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-2xl">
                 FB
               </div>
             </div>
