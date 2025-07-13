@@ -1,6 +1,5 @@
 
 import React from 'react';
-import felipeImage from '../assets/felipe-professional.jpg';
 
 const AboutSection = () => {
   const specialties = [
@@ -23,7 +22,7 @@ const AboutSection = () => {
           <div className="scroll-fade-in">
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src={felipeImage}
+                src="/lovable-uploads/705e9803-5462-480f-9b2c-cb2dde8c7682.png"
                 alt="Felipe Botticelli - Especialista em Luxo"
                 className="w-full h-auto max-h-[700px] object-cover object-center rounded-2xl shadow-2xl"
               />
