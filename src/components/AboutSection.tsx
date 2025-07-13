@@ -102,7 +102,15 @@ const AboutSection = () => {
             </div>
 
             {/* CTA */}
-            <button className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300">
+            <button 
+              onClick={() => {
+                const message = "Olá Felipe! Vi seu site e gostaria de falar sobre imóveis de alto padrão.";
+                const phoneNumber = "5511999999999"; // Substitua pelo número real do Felipe
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
+              className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
+            >
               Falar com Felipe
             </button>
           </div>
