@@ -102,7 +102,7 @@ const AboutSection = () => {
             </div>
 
             {/* CTA */}
-            <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-all duration-300">
+            <button className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300">
               Falar com Felipe
             </button>
           </div>
