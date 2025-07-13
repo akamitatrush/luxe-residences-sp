@@ -131,7 +131,10 @@ const Properties = () => {
                 variant={viewMode === 'grid' ? 'secondary' : 'outline'}
                 size="sm"
                 onClick={() => setViewMode('grid')}
-                className="flex-1"
+                className={`flex-1 ${viewMode === 'grid' 
+                  ? 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50' 
+                  : 'bg-white text-slate-600 border border-slate-300 hover:bg-slate-50'
+                }`}
               >
                 <Grid className="w-4 h-4 mr-2" />
                 Grid
@@ -140,7 +143,10 @@ const Properties = () => {
                 variant={viewMode === 'list' ? 'secondary' : 'outline'}
                 size="sm"
                 onClick={() => setViewMode('list')}
-                className="flex-1"
+                className={`flex-1 ${viewMode === 'list' 
+                  ? 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50' 
+                  : 'bg-white text-slate-600 border border-slate-300 hover:bg-slate-50'
+                }`}
               >
                 <List className="w-4 h-4 mr-2" />
                 Lista
